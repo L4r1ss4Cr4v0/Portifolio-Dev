@@ -128,6 +128,7 @@ export default function TiltedCard({
             width: imageWidth,
             height: imageHeight,
           }}
+          draggable="false"
         />
 
         {displayOverlayContent && overlayContent && (

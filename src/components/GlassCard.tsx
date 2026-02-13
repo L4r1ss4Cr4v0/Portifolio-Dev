@@ -1,23 +1,23 @@
-import { motion, HTMLMotionProps } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { motion, HTMLMotionProps } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-interface GlassCardProps extends HTMLMotionProps<'div'> {
+interface GlassCardProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
 }
 
-export function GlassCard({ 
-  children, 
-  className = '', 
+export function GlassCard({
+  children,
+  className = "",
   hover = true,
-  ...props 
+  ...props
 }: GlassCardProps) {
   return (
     <motion.div
       className={cn(
-        'glass-card p-6',
-        hover && 'hover:shadow-lg transition-shadow duration-300',
+        "glass-card p-6",
+        hover && "hover:shadow-lg transition-shadow duration-300",
         className
       )}
       whileHover={hover ? { y: -4 } : undefined}
