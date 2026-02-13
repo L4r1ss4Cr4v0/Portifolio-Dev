@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ParallaxTitle } from "../ui/ParallaxTitle";
-import { SkillBadge } from "../ui/SkillBadge";
+import { ParallaxTitle } from "../ParallaxTitle";
+import { SkillBadge } from "../SkillBadge";
+import { useTranslation } from "react-i18next";
 
-const skillCategories = [
+const SKILL_CATEGORIES = [
   {
     title: "Frontend",
     skills: [
@@ -49,14 +50,23 @@ const skillCategories = [
   },
 ];
 
+const STATS = [
+  { value: "10+", translationKey: "metrics.yearsExperience" },
+  { value: "50+", translationKey: "metrics.projectsDelivered" },
+  { value: "25+", translationKey: "metrics.teamMembersLed" },
+  { value: "99%", translationKey: "metrics.clientSatisfaction" },
+];
+
 export function SkillsSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="py-24 px-6 bg-secondary/30 relative">
       <div className="max-w-6xl mx-auto">
-        <ParallaxTitle>Skills</ParallaxTitle>
+        <ParallaxTitle>{t("navigation.skills")}</ParallaxTitle>
 
         <div className="mt-16 grid md:grid-cols-2 gap-12">
-          {skillCategories.map((category, categoryIndex) => (
+          {SKILL_CATEGORIES.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               className="space-y-6"
@@ -68,6 +78,7 @@ export function SkillsSection() {
               <h3 className="text-xl font-semibold text-muted-foreground uppercase tracking-wider">
                 {category.title}
               </h3>
+
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <SkillBadge
@@ -82,7 +93,6 @@ export function SkillsSection() {
           ))}
         </div>
 
-        {/* Experience Stats */}
         <motion.div
           className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8"
           initial={{ opacity: 0, y: 30 }}
@@ -90,14 +100,9 @@ export function SkillsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {[
-            { value: "10+", label: "Years Experience" },
-            { value: "50+", label: "Projects Delivered" },
-            { value: "25+", label: "Team Members Led" },
-            { value: "99%", label: "Client Satisfaction" },
-          ].map((stat, index) => (
+          {STATS.map((stat, index) => (
             <motion.div
-              key={stat.label}
+              key={stat.translationKey}
               className="text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -107,8 +112,9 @@ export function SkillsSection() {
               <div className="text-4xl md:text-5xl font-bold mb-2">
                 {stat.value}
               </div>
+
               <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                {stat.label}
+                {t(stat.translationKey)}
               </div>
             </motion.div>
           ))}

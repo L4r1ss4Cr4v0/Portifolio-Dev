@@ -1,16 +1,13 @@
+import { navItems } from "@/lib/itens";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Download, Menu, X } from "lucide-react";
+import { Download, Menu, Sun, X } from "lucide-react";
 import { useState, useEffect } from "react";
-
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
+import { CustomButton } from "../ui/button/CustomButton";
+import { LanguageCombobox } from "../LanguageCombobox";
+import { useTranslation } from "react-i18next";
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
@@ -53,20 +50,33 @@ export function Navbar() {
                 onClick={() => handleNavClick(item.href)}
                 className="px-4 py-2 text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-200 tracking-wide uppercase"
               >
-                {item.label}
+                {t(item.label)}
               </button>
             </li>
           ))}
         </ul>
 
-        <motion.button
-          className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full border border-border bg-background/50 text-sm font-medium hover:bg-secondary transition-all duration-200"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          Curriculo
-          <Download className="w-4 h-4" />
-        </motion.button>
+        <div className="flex justify-center items-center gap-3">
+          <CustomButton
+            whileHover={{
+              rotate: 360,
+            }}
+            variant="outline"
+            className="hidden md:flex p-3 transition-none"
+            icon={<Sun className="w-4 h-4" />}
+          />
+
+          <LanguageCombobox />
+
+          <CustomButton
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="hidden md:flex px-5 py-2"
+            label="Curriculo"
+            variant="outline"
+            icon={<Download className="w-4 h-4" />}
+          />
+        </div>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -93,10 +103,14 @@ export function Navbar() {
                 </li>
               ))}
               <li className="pt-2 border-t border-border">
-                <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border bg-background/50 text-sm font-medium hover:bg-secondary transition-all duration-200">
-                  Curriculum
-                  <Download className="w-4 h-4" />
-                </button>
+                <CustomButton
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-5 py-2 "
+                  label="Curriculo"
+                  variant="outline"
+                  icon={<Download className="w-4 h-4" />}
+                />
               </li>
             </ul>
           </motion.div>

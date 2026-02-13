@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, ArrowDown, Image, Mouse } from "lucide-react";
-import { AnimatedText } from "../ui/AnimatedText";
-import { SocialButton } from "../ui/SocialButton";
-import { SkillBadge } from "../ui/SkillBadge";
-import { skills } from "@/lib/itens";
-import TiltedCard from "../ui/tiltedCard";
+import { Github, Linkedin, Mouse } from "lucide-react";
+import { SkillBadge } from "../SkillBadge";
+import { GITHUB, LINKEDIN, skills } from "@/lib/itens";
 import { CustomButton } from "../ui/button/CustomButton";
 import DecryptedText from "../DecryptedText";
+import { AnimatedText } from "../AnimatedText";
+import TiltedCard from "../TiltedCard";
+import { Trans, useTranslation } from "react-i18next";
 
 export function HeroSection() {
+  const { t } = useTranslation();
+
   const scrollToAbout = () => {
     document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -30,25 +32,20 @@ export function HeroSection() {
           >
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                <strong>Hi! </strong>
-                <span className="font-light">I'm a</span>
+                <span className="font-light">
+                  <Trans
+                    i18nKey="hero.greeting"
+                    components={[<strong className="font-bold" />]}
+                  />
+                </span>
+
                 <br />
                 <AnimatedText
-                  text="Tech Lead"
+                  text={t("hero.name")}
                   className="text-foreground"
                   delay={0.3}
                 />
               </h1>
-
-              <DecryptedText
-                text="larissa"
-                speed={80}
-                maxIterations={50}
-                className="revealed"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"
-                animateOn="both"
-              />
 
               <motion.p
                 className="text-lg text-muted-foreground max-w-md leading-relaxed"
@@ -56,8 +53,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                Experienced software engineer passionate about building scalable
-                systems and leading high-performing engineering teams.
+                {t("hero.description")}
               </motion.p>
             </div>
 
@@ -84,20 +80,31 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
             >
-              <CustomButton>
-                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+              <CustomButton
+                asChild
+                variant="outline"
+                className="text-sm tracking-wide uppercase"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <a href={LINKEDIN} target="_blank">
+                  {t("common.viewLinkedIn")}
+                  <Linkedin />
+                </a>
               </CustomButton>
 
-              <SocialButton
-                icon={Linkedin}
-                label="View LinkedIn"
-                variant="outline"
-              />
-              <SocialButton
-                icon={Github}
-                label="View GitHub"
+              <CustomButton
+                asChild
                 variant="filled"
-              />
+                className="text-sm tracking-wide uppercase"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <a href={GITHUB} target="_blank">
+                  {t("common.viewGithub")}
+                  <Github />
+                </a>
+              </CustomButton>
             </motion.div>
           </motion.div>
 
@@ -105,7 +112,6 @@ export function HeroSection() {
             imageSrc="Perfil.jpg"
             altText="Foto de perfil"
             containerHeight="500px"
-            containerWidth="500px"
             imageHeight="500px"
             imageWidth="500px"
             rotateAmplitude={10}
@@ -119,7 +125,7 @@ export function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 rounded-full border border-border hover:bg-zinc-200 transition-colors"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
+        transition={{ delay: 1, duration: 0.6 }}
         whileHover={{ y: 5 }}
       >
         <Mouse className="w-8 h-8 text-muted-foreground" />

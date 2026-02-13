@@ -2,23 +2,20 @@ import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
 import { HTMLMotionProps, motion } from "framer-motion";
 
-const socialMediaStyle =
-  "flex items-center justify-center gap-4 px-8 py-4 rounded-2xl font-medium transition-all duration-300";
-
 const buttonVariants = {
   default: `
     flex items-center gap-3 px-6 py-3
     rounded-full border border-primary-foreground/30
     hover:border-primary-foreground/60
     transition-colors duration-300
-    text-md font-medium tracking-wide
+   font-medium tracking-wide
   `,
 
   glass: `
     relative
     px-[60px] py-[10px]
     border-2 border-black
-    text-black
+    text-black text-md font-semibold
     bg-transparent
     rounded-full
     overflow-hidden
@@ -39,8 +36,8 @@ const buttonVariants = {
     hover:text-white
   `,
 
-  socialMediaOutline: `${socialMediaStyle} border-2 border-border bg-background hover:bg-secondary`,
-  socialMediaFilled: `${socialMediaStyle} bg-primary text-primary-foreground hover:bg-primary/90`,
+  outline: `flex items-center justify-center gap-4 px-8 py-4 rounded-2xl font-medium transition-all duration-300 border-2 border-border bg-background hover:bg-secondary `,
+  filled: `flex items-center justify-center gap-4 px-8 py-4 rounded-2xl font-medium transition-all duration-300 bg-primary/90 text-primary-foreground hover:bg-primary`,
 };
 
 const MotionSlot = motion(Slot);
@@ -69,7 +66,7 @@ export function CustomButton({
         `
         relative isolate
         inline-flex items-center justify-center gap-2
-        font-medium
+        font-md text-sm
         transition-colors duration-300
         hover:cursor-pointer
         `,

@@ -25,6 +25,20 @@ export const skills = [
   },
 ];
 
+export const navItems = [
+  { label: "navigation.home", href: "#home" },
+  { label: "navigation.about", href: "#about" },
+  { label: "navigation.projects", href: "#projects" },
+  { label: "navigation.skills", href: "#skills" },
+  { label: "navigation.contact", href: "#contact" },
+];
+
+export const languages = [
+  { language: "Português", flag: "br", code: "pt-br" },
+  { language: "English", flag: "us", code: "en" },
+  { language: "Español", flag: "es", code: "es" },
+];
+
 export const EMAIL = "larissacravoccamara@gmail.com";
 export const LINKEDIN =
   "https://www.linkedin.com/in/larissa-cravo-carvalho-camara-santos-154b66306/";

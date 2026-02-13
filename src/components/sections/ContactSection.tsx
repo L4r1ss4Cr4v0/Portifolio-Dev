@@ -1,21 +1,23 @@
 import { motion } from "framer-motion";
-import { ParallaxTitle } from "../ui/ParallaxTitle";
-import { GlassCard } from "../ui/GlassCard";
 import { AVAILABILITY, EMAIL, LOCATION } from "@/lib/itens";
 import { Calendar, Mail, MapPin, Send } from "lucide-react";
 import { CustomButton } from "../ui/button/CustomButton";
+import { ParallaxTitle } from "../ParallaxTitle";
+import { GlassCard } from "../GlassCard";
+import { useTranslation } from "react-i18next";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: EMAIL },
-  { icon: MapPin, label: "Location", value: LOCATION },
-  { icon: Calendar, label: "Availability", value: AVAILABILITY },
+  { icon: Mail, label: "contact.email", value: EMAIL },
+  { icon: MapPin, label: "contact.location", value: LOCATION },
+  { icon: Calendar, label: "contact.availability", value: AVAILABILITY },
 ];
 
 export function ContactSection() {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-24 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <ParallaxTitle>Contact</ParallaxTitle>
+        <ParallaxTitle>{t("navigation.contact")}</ParallaxTitle>
 
         <div className="mt-16 grid lg:grid-cols-2 gap-16">
           <motion.div
@@ -27,12 +29,10 @@ export function ContactSection() {
           >
             <div className="space-y-4">
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight">
-                Let's work together
+                {t("contact.title")}
               </h3>
               <p className="text-muted-foreground leading-relaxed max-w-md">
-                I'm always interested in hearing about new opportunities,
-                challenging projects, or just having a conversation about
-                technology.
+                {t("contact.description")}
               </p>
             </div>
 
@@ -51,7 +51,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">
-                      {item.label}
+                      {t(item.label)}
                     </div>
                     <div className="font-medium">{item.value}</div>
                   </div>
@@ -71,42 +71,53 @@ export function ContactSection() {
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Name</label>
+                    <label className="text-sm font-medium">
+                      {t("contact.form.nameLabel")}
+                    </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors"
-                      placeholder="Your name"
+                      placeholder={t("contact.form.namePlaceholder")}
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Email</label>
+                    <label className="text-sm font-medium">
+                      {t("contact.form.emailLabel")}
+                    </label>
                     <input
                       type="email"
                       className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors"
-                      placeholder="your@email.com"
+                      placeholder={t("contact.form.emailPlaceholder")}
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Subject</label>
+                  <label className="text-sm font-medium">
+                    {t("contact.form.subjectLabel")}
+                  </label>
                   <input
                     type="text"
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors"
-                    placeholder="What's this about?"
+                    placeholder={t("contact.form.subjectPlaceholder")}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Message</label>
+                  <label className="text-sm font-medium">
+                    {t("contact.form.messageLabel")}
+                  </label>
                   <textarea
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder={t("contact.form.messagePlaceholder")}
                   />
                 </div>
 
-                <CustomButton variant="glass" label="DDD"></CustomButton>
+                <CustomButton
+                  variant="glass"
+                  label={t("contact.form.submitButton")}
+                ></CustomButton>
               </form>
             </GlassCard>
           </motion.div>

@@ -1,0 +1,89 @@
+{
+  "common": {
+    "download": "Baixar",
+    "viewProject": "Ver projeto",
+    "viewLinkedIn": "Ver LinkedIn",
+    "viewGithub": "Ver GitHub"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato",
+    "resume": "Currículo"
+  },
+  "hero": {
+    "greeting": "<0>Olá!</0> Eu sou a",
+    "role": "Tech Lead",
+    "name": "Larissa Cravo",
+    "description": "Engenheira de software experiente, apaixonada por construir sistemas escaláveis e liderar times de alta performance."
+  },
+  "about": {
+    "title": "Transformando ideias em <0>soluções escaláveis</0>",
+    "paragraph1": "Como Tech Lead com mais de uma década de experiência, sou especializada em arquitetar sistemas robustos e liderar times de engenharia para entregar produtos de software excepcionais.",
+    "paragraph2": "Minha expertise abrange desenvolvimento full-stack, infraestrutura em nuvem e tecnologias emergentes. Sou apaixonada por código limpo, otimização de performance e criação de experiências de usuário intuitivas.",
+    "paragraph3": "Atualmente focada na construção de aplicações com IA e no estabelecimento de boas práticas para desenvolvimento moderno de software."
+  },
+  "stats": {
+    "yearsExperience": {
+      "value": "10+",
+      "label": "Anos construindo aplicações em produção"
+    },
+    "teamLead": {
+      "value": "Team Lead",
+      "label": "Gestão de times multidisciplinares"
+    },
+    "projectsDelivered": {
+      "value": "50+",
+      "label": "Projetos entregues em múltiplos domínios"
+    },
+    "aiMl": {
+      "value": "IA & ML",
+      "label": "Integração e otimização de sistemas"
+    }
+  },
+  "projects": {
+    "cloudPlatform": {
+      "title": "Plataforma em Nuvem",
+      "description": "Plataforma de gerenciamento de infraestrutura em nuvem de nível corporativo, com monitoramento em tempo real e recursos de autoescalonamento."
+    },
+    "aiAnalytics": {
+      "title": "Analytics com IA",
+      "description": "Dashboard analítico com machine learning para inteligência de negócios e geração de insights preditivos."
+    },
+    "fintechApp": {
+      "title": "Aplicação FinTech",
+      "description": "Aplicação segura de serviços financeiros com transações em tempo real e integração com blockchain."
+    }
+  },
+  "metrics": {
+    "yearsExperience": "Anos de experiência",
+    "projectsDelivered": "Projetos entregues",
+    "teamMembersLed": "Membros liderados",
+    "clientSatisfaction": "Satisfação dos clientes"
+  },
+  "contact": {
+    "title": "Vamos trabalhar juntas",
+    "description": "Estou sempre interessada em novas oportunidades, projetos desafiadores ou apenas em conversar sobre tecnologia.",
+    "email": "Email",
+    "location": "Localização",
+    "availability": "Disponibilidade",
+    "position": "Engenheira Full Stack",
+    "form": {
+      "nameLabel": "Nome",
+      "namePlaceholder": "Seu nome",
+      "emailLabel": "Email",
+      "emailPlaceholder": "seu@email.com",
+      "subjectLabel": "Assunto",
+      "subjectPlaceholder": "Sobre o que é?",
+      "messageLabel": "Mensagem",
+      "messagePlaceholder": "Conte-me sobre a oportunidade...",
+      "submitButton": "Enviar"
+    }
+  },
+  "footer": {
+    "closingMessage": "Espero que tenha gostado dos meus projetos, currículo e, acima de tudo, da minha pessoa.",
+    "location": "Belo Horizonte, MG, Brasil"
+  }
+}

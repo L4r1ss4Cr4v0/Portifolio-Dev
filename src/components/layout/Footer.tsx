@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { CustomButton } from "../ui/button/CustomButton";
 import { CV } from "@/lib/itens";
+import { useTranslation } from "react-i18next";
 
 const socialLinks = [
   {
@@ -14,6 +15,7 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-primary text-primary-foreground py-16 px-20">
       <motion.div
@@ -28,8 +30,7 @@ export function Footer() {
             Larissa Cravo Carvalho Câmara Santos
           </h3>
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
-            Espero que tenha gostado dos meus projetos, currículo e, acima de
-            tudo, da minha pessoa
+            {t("footer.closingMessage")}
           </p>
         </div>
 

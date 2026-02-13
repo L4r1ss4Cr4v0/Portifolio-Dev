@@ -1,0 +1,89 @@
+{
+  "common": {
+    "download": "Download",
+    "viewProject": "View Project",
+    "viewLinkedIn": "View LinkedIn",
+    "viewGithub": "View GitHub"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "<0>Hello!</0> I am",
+    "role": "Tech Lead",
+    "name": "Larissa Cravo",
+    "description": "Experienced software engineer passionate about building scalable systems and leading high-performance teams."
+  },
+  "about": {
+    "title": "Transforming ideas into <0>scalable solutions</0>",
+    "paragraph1": "As a Tech Lead with over a decade of experience, I specialize in architecting robust systems and leading engineering teams to deliver exceptional software products.",
+    "paragraph2": "My expertise spans full-stack development, cloud infrastructure, and emerging technologies. I am passionate about clean code, performance optimization, and creating intuitive user experiences.",
+    "paragraph3": "Currently focused on building AI-powered applications and establishing best practices for modern software development."
+  },
+  "stats": {
+    "yearsExperience": {
+      "value": "10+",
+      "label": "Years building production applications"
+    },
+    "teamLead": {
+      "value": "Team Lead",
+      "label": "Managing cross-functional teams"
+    },
+    "projectsDelivered": {
+      "value": "50+",
+      "label": "Projects delivered across multiple domains"
+    },
+    "aiMl": {
+      "value": "AI & ML",
+      "label": "System integration and optimization"
+    }
+  },
+  "projects": {
+    "cloudPlatform": {
+      "title": "Cloud Platform",
+      "description": "Enterprise-grade cloud infrastructure management platform with real-time monitoring and auto-scaling capabilities."
+    },
+    "aiAnalytics": {
+      "title": "AI Analytics",
+      "description": "Machine learning-powered analytics dashboard for business intelligence and predictive insights."
+    },
+    "fintechApp": {
+      "title": "FinTech Application",
+      "description": "Secure financial services application with real-time transactions and blockchain integration."
+    }
+  },
+  "metrics": {
+    "yearsExperience": "Years of Experience",
+    "projectsDelivered": "Projects Delivered",
+    "teamMembersLed": "Team Members Led",
+    "clientSatisfaction": "Client Satisfaction"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "description": "I'm always interested in new opportunities, challenging projects, or simply talking about technology.",
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "position": "Full Stack Engineer",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "What is it about?",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about the opportunity...",
+      "submitButton": "Send"
+    }
+  },
+  "footer": {
+    "closingMessage": "I hope you enjoyed my projects, resume, and above all, getting to know me.",
+    "location": "Belo Horizonte, MG, Brazil"
+  }
+}
