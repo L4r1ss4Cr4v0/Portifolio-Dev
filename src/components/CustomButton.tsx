@@ -1,6 +1,12 @@
 import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
-import { HTMLMotionProps, motion } from "framer-motion";
+import {
+  HTMLMotionProps,
+  motion,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { useRef, ReactNode } from "react";
 
 const buttonVariants = {
   default: `
@@ -47,44 +53,129 @@ type ButtonProps = {
   variant?: keyof typeof buttonVariants;
   icon?: React.ReactNode;
   label?: string;
-} & HTMLMotionProps<"button">;
+  onClick?: Function;
+  showFloatingLabel?: boolean;
+  floatingLabelText?: string;
+  children?: ReactNode;
+} & Omit<HTMLMotionProps<"button">, "children">;
 
 export function CustomButton({
   asChild = false,
   variant = "default",
   className,
+  onClick,
   children,
   icon,
   label,
+  showFloatingLabel = false,
+  floatingLabelText = "",
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? MotionSlot : motion.button;
+  const ref = useRef<HTMLButtonElement>(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateLabel = useSpring(useMotionValue(0), {
+    stiffness: 350,
+    damping: 30,
+    mass: 1,
+  });
+  const opacity = useSpring(0);
+
+  function handleMouse(e: React.MouseEvent<HTMLButtonElement>) {
+    if (!ref.current || !showFloatingLabel) return;
+
+    const rect = ref.current.getBoundingClientRect();
+    x.set(e.clientX - rect.left);
+    y.set(e.clientY - rect.top);
+
+    const offsetX = e.clientX - rect.left - rect.width / 2;
+    const velocityX = offsetX * 0.3;
+    rotateLabel.set(-velocityX);
+  }
+
+  function handleMouseEnter() {
+    if (showFloatingLabel) {
+      opacity.set(1);
+    }
+  }
+
+  function handleMouseLeave() {
+    if (showFloatingLabel) {
+      opacity.set(0);
+      rotateLabel.set(0);
+    }
+  }
+
+  if (asChild) {
+    return (
+      <MotionSlot
+        ref={ref}
+        className={cn(
+          `
+          relative isolate
+          inline-flex items-center justify-center gap-2
+          font-md text-sm
+          transition-colors duration-300
+          hover:cursor-pointer
+          `,
+          buttonVariants[variant],
+          className
+        )}
+        whileHover={variant === "default" ? { scale: 1.02 } : undefined}
+        whileTap={variant === "default" ? { scale: 0.98 } : undefined}
+        onMouseMove={handleMouse}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        {...props}
+      >
+        {children}
+      </MotionSlot>
+    );
+  }
 
   return (
-    <Comp
+    <motion.button
+      ref={ref}
       className={cn(
         `
         relative isolate
         inline-flex items-center justify-center gap-2
-        font-md text-sm
+        font-md text-sm 
         transition-colors duration-300
         hover:cursor-pointer
         `,
         buttonVariants[variant],
         className
       )}
-      whileHover={variant === "default" && { scale: 1.02 }}
-      whileTap={variant === "default" && { scale: 0.98 }}
+      whileHover={variant === "default" ? { scale: 1.02 } : undefined}
+      whileTap={variant === "default" ? { scale: 0.98 } : undefined}
+      onMouseMove={handleMouse}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       {...props}
     >
-      {asChild ? (
-        children
-      ) : (
-        <span className="relative z-10 flex items-center gap-2">
-          {icon && <span className="shrink-0">{icon}</span>}
-          {label && <span>{label}</span>}
-        </span>
+      <span className="relative z-10 flex items-center gap-2">
+        {icon && <span className="shrink-0">{icon}</span>}
+        {label && <span>{label}</span>}
+      </span>
+
+      {showFloatingLabel && floatingLabelText && (
+        <motion.div
+          className="absolute pointer-events-none z-[100] px-3 py-1.5 bg-black text-white text-xs rounded-md whitespace-nowrap shadow-lg"
+          style={{
+            left: x,
+            top: y,
+            opacity,
+            rotate: rotateLabel,
+            x: "-50%",
+            y: "-120%",
+          }}
+        >
+          {floatingLabelText}
+        </motion.div>
       )}
-    </Comp>
+    </motion.button>
   );
 }

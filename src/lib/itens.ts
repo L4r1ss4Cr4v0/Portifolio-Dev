@@ -1,3 +1,17 @@
+import { Github, Linkedin, Mail, MapPin, IdCard } from "lucide-react";
+
+export const EMAIL = "larissacravoccamara@gmail.com";
+export const LINKEDIN =
+  "https://www.linkedin.com/in/larissa-cravo-carvalho-camara-santos-154b66306/";
+export const GITHUB = "https://github.com/L4r1ss4Cr4v0";
+export const LOCATION = "Belo Horizonte, MG, BR";
+
+export const languages = [
+  { language: "Português", flag: "br", code: "pt-br" },
+  { language: "English", flag: "us", code: "en" },
+  { language: "Español", flag: "es", code: "es" },
+];
+
 export const skills = [
   {
     name: "React",
@@ -33,16 +47,36 @@ export const navItems = [
   { label: "navigation.contact", href: "#contact" },
 ];
 
-export const languages = [
-  { language: "Português", flag: "br", code: "pt-br" },
-  { language: "English", flag: "us", code: "en" },
-  { language: "Español", flag: "es", code: "es" },
+export const socialLinks = [
+  {
+    icon: Linkedin,
+    href: LINKEDIN,
+    label: "LinkedIn",
+  },
+  { icon: Github, href: GITHUB, label: "GitHub" },
+  { icon: Mail, href: EMAIL, label: "contact.email" },
 ];
 
-export const EMAIL = "larissacravoccamara@gmail.com";
-export const LINKEDIN =
-  "https://www.linkedin.com/in/larissa-cravo-carvalho-camara-santos-154b66306/";
-export const GITHUB = "https://github.com/L4r1ss4Cr4v0";
-export const LOCATION = "Belo Horizonte, MG, BR";
-export const AVAILABILITY = "Engenheira Full Stack";
-export const CV = "/Curriculo - Larissa Cravo Carvalho Câmara Santos.pdf";
+export const contactInfo = [
+  { icon: Mail, label: "contact.email", value: EMAIL },
+  { icon: MapPin, label: "contact.location", value: LOCATION },
+  { icon: IdCard, label: "contact.currentPosition", value: "contact.position" },
+];
+
+export const projects = [
+  {
+    key: "cloudPlatform",
+    tech: ["React", "TypeScript", "AWS", "GraphQL"],
+    color: "from-blue-500/20 to-cyan-500/20",
+  },
+  {
+    key: "aiAnalytics",
+    tech: ["Python", "TensorFlow", "React", "D3.js"],
+    color: "from-violet-500/20 to-purple-500/20",
+  },
+  {
+    key: "fintechApp",
+    tech: ["Node.js", "React Native", "PostgreSQL"],
+    color: "from-emerald-500/20 to-teal-500/20",
+  },
+];

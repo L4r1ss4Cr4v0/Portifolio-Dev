@@ -1,21 +1,22 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
-import { CustomButton } from "../ui/button/CustomButton";
-import { CV } from "@/lib/itens";
 import { useTranslation } from "react-i18next";
-
-const socialLinks = [
-  {
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/larissa-cravo-carvalho-camara-santos-154b66306/",
-    label: "LinkedIn",
-  },
-  { icon: Github, href: "https://github.com/L4r1ss4Cr4v0/", label: "GitHub" },
-  { icon: Mail, href: "mailto:larissacravoccamara@gmail.com", label: "Email" },
-];
+import { CustomButton } from "../CustomButton";
+import { useResumeDownload } from "@/hooks/useResumeDownload";
+import { EMAIL, socialLinks } from "@/lib/itens";
+import { useState } from "react";
 
 export function Footer() {
   const { t } = useTranslation();
+  const { download } = useResumeDownload();
+  const [copied, setCopied] = useState<boolean>(false);
+
+  async function copyEmail() {
+    await navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
+
   return (
     <footer className="bg-primary text-primary-foreground py-16 px-20">
       <motion.div
@@ -41,25 +42,30 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col-reverse items-center gap-5">
-          <CustomButton asChild>
-            <a href={`/${CV}`} download={CV}>
-              <Download /> Download
-            </a>
-          </CustomButton>
+          <CustomButton
+            icon={<Download className="w-4 h-4" />}
+            label={t("navigation.resume")}
+            onClick={download}
+          />
+
           <div className="flex justify-end items-center gap-4">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <motion.a
-                key={label}
-                href={href}
-                target="_blank"
-                aria-label={label}
-                className="p-3 rounded-full border border-primary-foreground/20 hover:border-primary-foreground/50 hover:bg-primary-foreground/10 transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Icon className="w-5 h-5" />
-              </motion.a>
-            ))}
+            {socialLinks.map(({ icon: Icon, href, label }) =>
+              label !== "contact.email" ? (
+                <CustomButton asChild key={label}>
+                  <a href={href} target="_blank" aria-label={label}>
+                    <Icon className="w-5 h-5" />
+                  </a>
+                </CustomButton>
+              ) : (
+                <CustomButton
+                  key={label}
+                  icon={<Icon />}
+                  onClick={copyEmail}
+                  showFloatingLabel={true}
+                  floatingLabelText={copied ? "Email copiado" : "Copiar email"}
+                />
+              )
+            )}
           </div>
         </div>
       </motion.div>

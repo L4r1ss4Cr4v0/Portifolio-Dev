@@ -1,16 +1,9 @@
 import { motion } from "framer-motion";
-import { AVAILABILITY, EMAIL, LOCATION } from "@/lib/itens";
-import { Calendar, Mail, MapPin, Send } from "lucide-react";
-import { CustomButton } from "../ui/button/CustomButton";
 import { ParallaxTitle } from "../ParallaxTitle";
 import { GlassCard } from "../GlassCard";
 import { useTranslation } from "react-i18next";
-
-const contactInfo = [
-  { icon: Mail, label: "contact.email", value: EMAIL },
-  { icon: MapPin, label: "contact.location", value: LOCATION },
-  { icon: Calendar, label: "contact.availability", value: AVAILABILITY },
-];
+import { CustomButton } from "../CustomButton";
+import { contactInfo } from "@/lib/itens";
 
 export function ContactSection() {
   const { t } = useTranslation();
@@ -53,14 +46,17 @@ export function ContactSection() {
                     <div className="text-sm text-muted-foreground">
                       {t(item.label)}
                     </div>
-                    <div className="font-medium">{item.value}</div>
+                    <div className="font-medium">
+                      {item.value !== "contact.position"
+                        ? item.value
+                        : t(item.value)}
+                    </div>
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

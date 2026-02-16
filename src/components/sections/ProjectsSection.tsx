@@ -3,24 +3,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { ParallaxTitle } from "../ParallaxTitle";
 import { DeviceFrame } from "../DeviceFrame";
 import { useTranslation } from "react-i18next";
-
-const PROJECTS = [
-  {
-    key: "cloudPlatform",
-    tech: ["React", "TypeScript", "AWS", "GraphQL"],
-    color: "from-blue-500/20 to-cyan-500/20",
-  },
-  {
-    key: "aiAnalytics",
-    tech: ["Python", "TensorFlow", "React", "D3.js"],
-    color: "from-violet-500/20 to-purple-500/20",
-  },
-  {
-    key: "fintechApp",
-    tech: ["Node.js", "React Native", "PostgreSQL"],
-    color: "from-emerald-500/20 to-teal-500/20",
-  },
-];
+import { projects } from "@/lib/itens";
 
 export function ProjectsSection() {
   const { t } = useTranslation();
@@ -31,7 +14,7 @@ export function ProjectsSection() {
         <ParallaxTitle>{t("navigation.projects")}</ParallaxTitle>
 
         <div className="mt-16 space-y-32">
-          {PROJECTS.map((project, index) => {
+          {projects.map((project, index) => {
             const title = t(`projects.${project.key}.title`);
             const description = t(`projects.${project.key}.description`);
 
@@ -65,7 +48,7 @@ export function ProjectsSection() {
                 <div
                   className={`space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
-                  <h3 className="text-3xl md:text-4xl font-bold tracking-tight">
+                  <h3 className="text-3xl md:text-4xl font-semibold tracking-tight">
                     {title}
                   </h3>
 
@@ -77,7 +60,7 @@ export function ProjectsSection() {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs font-mono bg-secondary rounded-full text-secondary-foreground"
+                        className="px-3 py-1 text-xs font-mono bg-secondary rounded-full text-secondary-foreground border-[1px] "
                       >
                         {tech}
                       </span>
@@ -87,15 +70,6 @@ export function ProjectsSection() {
                   <div className="flex gap-4 pt-4">
                     <motion.button
                       className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {t("common.viewProject")}
-                      <ExternalLink className="w-4 h-4" />
-                    </motion.button>
-
-                    <motion.button
-                      className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-secondary transition-colors"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
