@@ -1,6 +1,5 @@
 {
   "common": {
-    "download": "Download",
     "viewProject": "View Project",
     "viewLinkedIn": "View LinkedIn",
     "viewGithub": "View GitHub"
@@ -68,7 +67,7 @@
     "description": "I'm always interested in new opportunities, challenging projects, or simply talking about technology.",
     "email": "Email",
     "location": "Location",
-    "availability": "Availability",
+    "currentPosition": "Current position",
     "position": "Full Stack Engineer",
     "form": {
       "nameLabel": "Name",

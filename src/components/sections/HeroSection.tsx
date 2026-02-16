@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mouse } from "lucide-react";
 import { SkillBadge } from "../SkillBadge";
 import { GITHUB, LINKEDIN, skills } from "@/lib/itens";
-import { CustomButton } from "../ui/button/CustomButton";
-import DecryptedText from "../DecryptedText";
 import { AnimatedText } from "../AnimatedText";
 import TiltedCard from "../TiltedCard";
 import { Trans, useTranslation } from "react-i18next";
+import { CustomButton } from "../CustomButton";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -48,7 +47,7 @@ export function HeroSection() {
               </h1>
 
               <motion.p
-                className="text-lg text-muted-foreground max-w-md leading-relaxed"
+                className="text-lg text-muted-foreground max-w-md leading-relaxed "
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -58,7 +57,7 @@ export function HeroSection() {
             </div>
 
             <motion.div
-              className="flex flex-wrap gap-3"
+              className="flex flex-wrap gap-3 max-sm:max-w-xs"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -75,7 +74,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 pt-4"
+              className="flex flex-col w-fit sm:flex-row gap-4 pt-4 "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
@@ -122,7 +121,7 @@ export function HeroSection() {
 
       <motion.button
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 rounded-full border border-border hover:bg-zinc-200 transition-colors"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 p-3 rounded-full border border-border hover:bg-zinc-200 transition-colors"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.6 }}

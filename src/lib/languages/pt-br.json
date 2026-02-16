@@ -68,7 +68,7 @@
     "description": "Estou sempre interessada em novas oportunidades, projetos desafiadores ou apenas em conversar sobre tecnologia.",
     "email": "Email",
     "location": "Localização",
-    "availability": "Disponibilidade",
+    "currentPosition": "Cargo atual",
     "position": "Engenheira Full Stack",
     "form": {
       "nameLabel": "Nome",

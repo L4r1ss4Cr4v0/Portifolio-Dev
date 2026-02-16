@@ -1,6 +1,5 @@
 {
   "common": {
-    "download": "Descargar",
     "viewProject": "Ver proyecto",
     "viewLinkedIn": "Ver LinkedIn",
     "viewGithub": "Ver GitHub"
@@ -68,7 +67,7 @@
     "description": "Siempre estoy interesada en nuevas oportunidades, proyectos desafiantes o simplemente en conversar sobre tecnología.",
     "email": "Correo electrónico",
     "location": "Ubicación",
-    "availability": "Disponibilidad",
+    "currentPosition": "Cargo actual",
     "position": "Ingeniera Full Stack",
     "form": {
       "nameLabel": "Nombre",

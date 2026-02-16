@@ -2,15 +2,17 @@ import { navItems } from "@/lib/itens";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Download, Menu, Sun, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { CustomButton } from "../ui/button/CustomButton";
 import { LanguageCombobox } from "../LanguageCombobox";
 import { useTranslation } from "react-i18next";
+import { CustomButton } from "../CustomButton";
+import { useResumeDownload } from "@/hooks/useResumeDownload";
 
 export function Navbar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
+  const { download } = useResumeDownload();
 
   const navBackground = useTransform(
     scrollY,
@@ -34,7 +36,7 @@ export function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl"
+      className="fixed top-6 right-0 -translate-x-1/2 z-50 w-[95%] max-w-4xl"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -64,6 +66,8 @@ export function Navbar() {
             variant="outline"
             className="hidden md:flex p-3 transition-none"
             icon={<Sun className="w-4 h-4" />}
+            // showFloatingLabel={true}
+            // floatingLabelText="Click to action!"
           />
 
           <LanguageCombobox />
@@ -72,8 +76,9 @@ export function Navbar() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="hidden md:flex px-5 py-2"
-            label="Curriculo"
+            label={t("navigation.resume")}
             variant="outline"
+            onClick={download}
             icon={<Download className="w-4 h-4" />}
           />
         </div>
@@ -98,7 +103,7 @@ export function Navbar() {
                     onClick={() => handleNavClick(item.href)}
                     className="w-full px-4 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-secondary/50 rounded-lg transition-colors duration-200 tracking-wide uppercase text-left"
                   >
-                    {item.label}
+                    {t(item.label)}
                   </button>
                 </li>
               ))}
