@@ -9,6 +9,7 @@ import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { useEffect, useState } from "react";
 import { ExperienceSection } from "@/components/sections/ExperienciesSection";
+import { ResumeProvider } from "@/components/ResumeProvider";
 
 const Index = () => {
   const [isDark, setIsDark] = useState(false);
@@ -18,18 +19,20 @@ const Index = () => {
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar isDark={isDark} toggleDark={() => setIsDark((prev) => !prev)} />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <ResumeProvider>
+      <div className="min-h-screen bg-background">
+        <Navbar isDark={isDark} toggleDark={() => setIsDark((prev) => !prev)} />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </ResumeProvider>
   );
 };
 

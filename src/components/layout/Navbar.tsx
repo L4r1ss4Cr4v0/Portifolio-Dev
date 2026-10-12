@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { LanguageCombobox } from "../LanguageCombobox";
 import { useTranslation } from "react-i18next";
 import { CustomButton } from "../CustomButton";
-import { useResumeDownload } from "@/hooks/useResumeDownload";
+import { useResume } from "../ResumeProvider";
+import { Button } from "../ui/button";
 
 interface Props {
   isDark: boolean;
@@ -17,7 +18,8 @@ export function Navbar({ isDark, toggleDark }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
-  const { download } = useResumeDownload();
+
+  const openResume = useResume();
 
   const navBackground = useTransform(
     scrollY,
@@ -91,10 +93,21 @@ export function Navbar({ isDark, toggleDark }: Props) {
             className="hidden md:flex px-5 py-2"
             label={t("navigation.resume")}
             variant="outline"
-            onClick={download}
-            icon={<Download className="w-4 h-4" />}
+            onClick={openResume}
           />
         </div>
+
+        <Button
+          variant="outline"
+          onClick={() => {
+            setIsOpen(false);
+            openResume();
+          }}
+          className="md:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-background/50 text-xs font-medium"
+        >
+          CV
+          <Download className="w-3.5 h-3.5" />
+        </Button>
 
         <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

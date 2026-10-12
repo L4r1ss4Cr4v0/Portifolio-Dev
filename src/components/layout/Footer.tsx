@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { CustomButton } from "../CustomButton";
-import { useResumeDownload } from "@/hooks/useResumeDownload";
 import { EMAIL, socialLinks } from "@/lib/itens";
 import { useState } from "react";
+import { useResume } from "../ResumeProvider";
 
 export function Footer() {
   const { t } = useTranslation();
-  const { download } = useResumeDownload();
   const [copied, setCopied] = useState<boolean>(false);
+
+  const openResume = useResume();
 
   async function copyEmail() {
     await navigator.clipboard.writeText(EMAIL);
@@ -42,11 +43,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col-reverse items-center gap-5">
-          <CustomButton
-            icon={<Download className="w-4 h-4" />}
-            label={t("navigation.resume")}
-            onClick={download}
-          />
+          <CustomButton label={t("navigation.resume")} onClick={openResume} />
 
           <div className="flex justify-end items-center gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) =>

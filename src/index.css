@@ -115,6 +115,20 @@
     --glass-bg: 0 0% 10% / 0.8;
     --glass-border: 0 0% 100% / 0.1;
   }
+
+  .curriculum-dialog {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .curriculum-paper {
+    box-shadow: var(--shadow-card);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .curriculum-dialog {
+      animation: none;
+    }
+  }
 }
 
 @layer base {
