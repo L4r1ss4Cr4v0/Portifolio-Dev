@@ -30,7 +30,7 @@ export function DeviceFrame({
       className={cn(
         "shadow-2xl overflow-hidden hover:cursor-pointer relative w-full max-w-xl",
         frameStyles[type],
-        className
+        className,
       )}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       style={{ transformStyle: "preserve-3d" }}
@@ -48,7 +48,6 @@ export function DeviceFrame({
         {children}
       </motion.div>
 
-      {/* Overlay escuro no hover */}
       <motion.div
         className="absolute inset-0 bg-black/30 pointer-events-none"
         initial={{ opacity: 0 }}
@@ -72,7 +71,7 @@ export function DeviceFrame({
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         onClick={(e) => {
           e.stopPropagation();
-          onProjectClick?.();
+          onProjectClick && onProjectClick();
         }}
       >
         {t("common.viewProject")}

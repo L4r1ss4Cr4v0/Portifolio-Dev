@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mouse } from "lucide-react";
 import { SkillBadge } from "../SkillBadge";
-import { GITHUB, LINKEDIN, skills } from "@/lib/itens";
+import { GITHUB, LINKEDIN, skills, techsTagsColors } from "@/lib/itens";
 import { AnimatedText } from "../AnimatedText";
 import TiltedCard from "../TiltedCard";
 import { Trans, useTranslation } from "react-i18next";
 import { CustomButton } from "../CustomButton";
+import CircleShape from "../CircleShape";
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -17,10 +18,9 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-32 pb-20 relative overflow-hidden"
+      className="min-h-screen: flex items-center justify-center px-6 pt-32 pb-20 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-transparent pointer-events-none" />
-
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -64,10 +64,10 @@ export function HeroSection() {
             >
               {skills.map((skill, index) => (
                 <SkillBadge
-                  key={skill.name}
-                  name={skill.name}
+                  key={skill}
+                  name={skill}
                   index={index}
-                  borderColor={skill.color}
+                  borderColor={techsTagsColors[skill]}
                   variant="outline"
                 />
               ))}
@@ -127,7 +127,7 @@ export function HeroSection() {
         transition={{ delay: 1, duration: 0.6 }}
         whileHover={{ y: 5 }}
       >
-        <Mouse className="w-8 h-8 text-muted-foreground" />
+        <Mouse className="w-8 h-8 text-muted-foreground hover:text-pink-600" />
       </motion.button>
     </section>
   );

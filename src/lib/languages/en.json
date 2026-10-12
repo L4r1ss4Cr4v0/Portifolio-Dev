@@ -20,40 +20,40 @@
   },
   "about": {
     "title": "Transforming ideas into <0>scalable solutions</0>",
-    "paragraph1": "As a Tech Lead with over a decade of experience, I specialize in architecting robust systems and leading engineering teams to deliver exceptional software products.",
-    "paragraph2": "My expertise spans full-stack development, cloud infrastructure, and emerging technologies. I am passionate about clean code, performance optimization, and creating intuitive user experiences.",
-    "paragraph3": "Currently focused on building AI-powered applications and establishing best practices for modern software development."
+    "paragraph1": "I am a Full Stack Software Engineer with a technical background in Web and Mobile, currently pursuing a degree in Software Engineering. I have experience in web and mobile app development, system architecture, RESTful APIs, databases, and technology integration to build robust and scalable solutions.",
+    "paragraph2": "I also act in technical project and team leadership, applying architecture best practices, Design Patterns, Git, CI/CD, and agile methodologies. I have experience with React, Next.js, TypeScript, Node.js, Tauri, automation with n8n, and external API and service integrations.",
+    "paragraph3": "My work focuses on solving real-world problems and delivering measurable impact, from commercial process automation to ERP system development. I also have experience applying AI to workflow automation and process optimization."
   },
   "stats": {
-    "yearsExperience": {
-      "value": "10+",
-      "label": "Years building production applications"
+    "best": {
+      "value": "4×",
+      "label": "Best of course"
     },
-    "teamLead": {
-      "value": "Team Lead",
-      "label": "Managing cross-functional teams"
+    "yearsExperience": {
+      "value": "3+",
+      "label": "Years of experience"
     },
     "projectsDelivered": {
-      "value": "50+",
-      "label": "Projects delivered across multiple domains"
+      "value": "100%",
+      "label": "Projetos entregues em múltiplos domínios"
     },
-    "aiMl": {
-      "value": "AI & ML",
-      "label": "System integration and optimization"
+    "teamLead": {
+      "value": "2×",
+      "label": "Tech Leadershipping"
     }
   },
   "projects": {
-    "cloudPlatform": {
-      "title": "Cloud Platform",
-      "description": "Enterprise-grade cloud infrastructure management platform with real-time monitoring and auto-scaling capabilities."
+    "projectOne": {
+      "title": "Barzêro",
+      "description": "Plataforma de gerenciamento de infraestrutura em nuvem de nível corporativo, com monitoramento em tempo real e recursos de autoescalonamento."
     },
-    "aiAnalytics": {
-      "title": "AI Analytics",
-      "description": "Machine learning-powered analytics dashboard for business intelligence and predictive insights."
+    "projectTwo": {
+      "title": "Eiffel Lens",
+      "description": "Dashboard analítico com machine learning para inteligência de negócios e geração de insights preditivos."
     },
-    "fintechApp": {
-      "title": "FinTech Application",
-      "description": "Secure financial services application with real-time transactions and blockchain integration."
+    "projectThree": {
+      "title": "Structa",
+      "description": "Aplicação segura de serviços financeiros com transações em tempo real e integração com blockchain."
     }
   },
   "metrics": {

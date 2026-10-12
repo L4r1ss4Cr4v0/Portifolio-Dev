@@ -1,13 +1,18 @@
 import { navItems } from "@/lib/itens";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Download, Menu, Sun, X } from "lucide-react";
+import { Download, Menu, Moon, Sun, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { LanguageCombobox } from "../LanguageCombobox";
 import { useTranslation } from "react-i18next";
 import { CustomButton } from "../CustomButton";
 import { useResumeDownload } from "@/hooks/useResumeDownload";
 
-export function Navbar() {
+interface Props {
+  isDark: boolean;
+  toggleDark: () => void;
+}
+
+export function Navbar({ isDark, toggleDark }: Props) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +22,7 @@ export function Navbar() {
   const navBackground = useTransform(
     scrollY,
     [0, 100],
-    ["hsl(0 0% 90% / 0.6)", "hsl(0 0% 100% / 0.8)"]
+    ["--header-bg-f", "--header-bg-s"],
   );
 
   useEffect(() => {
@@ -63,11 +68,19 @@ export function Navbar() {
             whileHover={{
               rotate: 360,
             }}
+            whileTap={{
+              rotate: 360,
+            }}
+            onClick={toggleDark}
             variant="outline"
             className="hidden md:flex p-3 transition-none"
-            icon={<Sun className="w-4 h-4" />}
-            // showFloatingLabel={true}
-            // floatingLabelText="Click to action!"
+            icon={
+              isDark ? (
+                <Moon className="w-4 h-4" />
+              ) : (
+                <Sun className="w-4 h-4" />
+              )
+            }
           />
 
           <LanguageCombobox />
@@ -83,12 +96,10 @@ export function Navbar() {
           />
         </div>
 
-        {/* Mobile Menu Button */}
         <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <motion.div
             className="absolute top-full left-0 right-0 mt-2 glass-card p-4 md:hidden"

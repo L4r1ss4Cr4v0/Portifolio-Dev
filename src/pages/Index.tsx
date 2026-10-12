@@ -7,13 +7,20 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark]);
+
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar isDark={isDark} toggleDark={() => setIsDark((prev) => !prev)} />
       <main>
-        <HeroSection />
+        <HeroSection  />
         <AboutSection />
         <ProjectsSection />
         <SkillsSection />

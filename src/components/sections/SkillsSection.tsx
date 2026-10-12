@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ParallaxTitle } from "../ParallaxTitle";
 import { SkillBadge } from "../SkillBadge";
 import { useTranslation } from "react-i18next";
+import { techsTagsColors } from "@/lib/itens";
 
 const SKILL_CATEGORIES = [
   {
@@ -13,47 +14,31 @@ const SKILL_CATEGORIES = [
       "Vue.js",
       "Tailwind CSS",
       "Framer Motion",
+      "Bootstrap",
     ],
   },
   {
     title: "Backend",
-    skills: [
-      "Node.js",
-      "Python",
-      "Go",
-      "GraphQL",
-      "REST APIs",
-      "Microservices",
-    ],
+    skills: ["Node.js", "Python", "REST APIs", "C#"],
+  },
+  {
+    title: "Mobile",
+    skills: ["React Native", "Swift", "Flutter", "Kotlin"],
   },
   {
     title: "Cloud & DevOps",
-    skills: [
-      "AWS",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-      "CI/CD",
-      "GitHub Actions",
-    ],
+    skills: ["Docker", "CI/CD", "GitHub Actions", "Vercel", "Netlify"],
   },
   {
     title: "Data & AI",
-    skills: [
-      "PostgreSQL",
-      "MongoDB",
-      "Redis",
-      "TensorFlow",
-      "OpenAI",
-      "LangChain",
-    ],
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "ChatGPT", "OpenAI", "n8n"],
   },
 ];
 
 const STATS = [
-  { value: "10+", translationKey: "metrics.yearsExperience" },
-  { value: "50+", translationKey: "metrics.projectsDelivered" },
-  { value: "25+", translationKey: "metrics.teamMembersLed" },
+  { value: "3+", translationKey: "metrics.yearsExperience" },
+  { value: "15+", translationKey: "metrics.projectsDelivered" },
+  { value: "5+", translationKey: "metrics.teamMembersLed" },
   { value: "99%", translationKey: "metrics.clientSatisfaction" },
 ];
 
@@ -84,8 +69,9 @@ export function SkillsSection() {
                   <SkillBadge
                     key={skill}
                     name={skill}
-                    index={skillIndex + categoryIndex * 6}
-                    variant="default"
+                    index={skillIndex}
+                    borderColor={techsTagsColors[skill]}
+                    variant="outline"
                   />
                 ))}
               </div>
@@ -113,7 +99,7 @@ export function SkillsSection() {
                 {stat.value}
               </div>
 
-              <div className="text-sm text-muted-foreground uppercase tracking-wider">
+              <div className="text-sm text-muted-foreground dark:text-pink-6 uppercase tracking-wider">
                 {t(stat.translationKey)}
               </div>
             </motion.div>

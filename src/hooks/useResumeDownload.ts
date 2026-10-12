@@ -5,9 +5,10 @@ export function useResumeDownload() {
 
   function download() {
     const link = document.createElement("a");
+    console.log(i18n.language);
     link.href = `/files/${i18n.language}/${t(
       "navigation.resume"
-    )} - Larissa Cravo Carvalho Câmara Santos.pdf`;
+    )}%20-%20Larissa Cravo Carvalho Câmara Santos.pdf`;
     link.download = `${t(
       "navigation.resume"
     )} - Larissa Cravo Carvalho Câmara Santos.pdf`;

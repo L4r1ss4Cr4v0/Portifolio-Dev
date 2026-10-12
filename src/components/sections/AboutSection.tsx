@@ -1,15 +1,8 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "../GlassCard";
-import { Code2, Users, Rocket, Brain } from "lucide-react";
 import { ParallaxTitle } from "../ParallaxTitle";
 import { Trans, useTranslation } from "react-i18next";
-
-const HIGHLIGHTS = [
-  { key: "yearsExperience", icon: Code2 },
-  { key: "teamLead", icon: Users },
-  { key: "projectsDelivered", icon: Rocket },
-  { key: "aiMl", icon: Brain },
-];
+import { hightlights } from "@/lib/itens";
 
 export function AboutSection() {
   const { t } = useTranslation();
@@ -30,19 +23,34 @@ export function AboutSection() {
             <h3 className="text-3xl md:text-4xl font-bold tracking-tight">
               <Trans
                 i18nKey="about.title"
-                components={[<span className="text-muted-foreground" />]}
+                components={[<span className="text-pink-600" />]}
               />
             </h3>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>{t("about.paragraph1")}</p>
-              <p>{t("about.paragraph2")}</p>
-              <p>{t("about.paragraph3")}</p>
+              <p>
+                <Trans
+                  i18nKey="about.paragraph1"
+                  components={[<span className="text-[--bold] font-medium" />]}
+                />
+              </p>
+              <p>
+                <Trans
+                  i18nKey="about.paragraph2"
+                  components={[<span className="text-[--bold] font-medium" />]}
+                />
+              </p>
+              <p>
+                <Trans
+                  i18nKey="about.paragraph3"
+                  components={[<span className="text-[--bold] font-medium" />]}
+                />
+              </p>
             </div>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 gap-4">
-            {HIGHLIGHTS.map((item, index) => {
+            {hightlights.map((item, index) => {
               const Icon = item.icon;
 
               return (
@@ -54,7 +62,7 @@ export function AboutSection() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <GlassCard className="h-full">
-                    <Icon className="w-8 h-8 mb-4 text-foreground" />
+                    <Icon className="w-8 h-8 mb-4 text-pink-600" />
                     <h4 className="text-xl font-semibold mb-2">
                       {t(`stats.${item.key}.value`)}
                     </h4>

@@ -20,8 +20,9 @@ const buttonVariants = {
   glass: `
     relative
     px-[60px] py-[10px]
-    border-2 border-black
-    text-black
+    border-2 border-[--primary-text]
+    text-[--primary-text]
+    font-semibold
     bg-transparent
     rounded-full
     overflow-hidden
@@ -31,7 +32,7 @@ const buttonVariants = {
     after:content-['']
     after:absolute
     after:inset-0
-    after:bg-black
+    after:bg-[--primary-foreground]
     after:scale-x-0
     after:origin-left
     after:transition-transform
@@ -46,7 +47,7 @@ const buttonVariants = {
   filled: `flex items-center justify-center gap-4 px-8 py-4 rounded-2xl font-medium transition-all duration-300 bg-primary/90 text-primary-foreground hover:bg-primary`,
 };
 
-const MotionSlot = motion(Slot);
+const MotionSlot = motion.create(Slot);
 
 type ButtonProps = {
   asChild?: boolean;
@@ -120,7 +121,7 @@ export function CustomButton({
           hover:cursor-pointer
           `,
           buttonVariants[variant],
-          className
+          className,
         )}
         whileHover={variant === "default" ? { scale: 1.02 } : undefined}
         whileTap={variant === "default" ? { scale: 0.98 } : undefined}
@@ -146,7 +147,7 @@ export function CustomButton({
         hover:cursor-pointer
         `,
         buttonVariants[variant],
-        className
+        className,
       )}
       whileHover={variant === "default" ? { scale: 1.02 } : undefined}
       whileTap={variant === "default" ? { scale: 0.98 } : undefined}

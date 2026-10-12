@@ -4,12 +4,15 @@ import { GlassCard } from "../GlassCard";
 import { useTranslation } from "react-i18next";
 import { CustomButton } from "../CustomButton";
 import { contactInfo } from "@/lib/itens";
+import CustomForms from "../CustomForms";
+import { Circle } from "lucide-react";
+import CircleShape from "../CircleShape";
 
 export function ContactSection() {
   const { t } = useTranslation();
   return (
     <section id="contact" className="py-24 px-6 relative">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         <ParallaxTitle>{t("navigation.contact")}</ParallaxTitle>
 
         <div className="mt-16 grid lg:grid-cols-2 gap-16">
@@ -40,7 +43,7 @@ export function ContactSection() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-foreground" />
+                    <item.icon className="w-5 h-5 text-pink-600" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">
@@ -62,59 +65,11 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="pos-absolute "
           >
-            <GlassCard className="p-8" hover={false}>
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">
-                      {t("contact.form.nameLabel")}
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors"
-                      placeholder={t("contact.form.namePlaceholder")}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">
-                      {t("contact.form.emailLabel")}
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors"
-                      placeholder={t("contact.form.emailPlaceholder")}
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">
-                    {t("contact.form.subjectLabel")}
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors"
-                    placeholder={t("contact.form.subjectPlaceholder")}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">
-                    {t("contact.form.messageLabel")}
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-foreground/30 focus:outline-none transition-colors resize-none"
-                    placeholder={t("contact.form.messagePlaceholder")}
-                  />
-                </div>
-
-                <CustomButton
-                  variant="glass"
-                  label={t("contact.form.submitButton")}
-                ></CustomButton>
-              </form>
+            <CircleShape />
+            <GlassCard className="p-8 z-50 " hover={false}>
+              <CustomForms />
             </GlassCard>
           </motion.div>
         </div>

@@ -21,40 +21,40 @@
   },
   "about": {
     "title": "Transformando ideias em <0>soluções escaláveis</0>",
-    "paragraph1": "Como Tech Lead com mais de uma década de experiência, sou especializada em arquitetar sistemas robustos e liderar times de engenharia para entregar produtos de software excepcionais.",
-    "paragraph2": "Minha expertise abrange desenvolvimento full-stack, infraestrutura em nuvem e tecnologias emergentes. Sou apaixonada por código limpo, otimização de performance e criação de experiências de usuário intuitivas.",
-    "paragraph3": "Atualmente focada na construção de aplicações com IA e no estabelecimento de boas práticas para desenvolvimento moderno de software."
+    "paragraph1": "<0>Engenheira de Software Full Stack</0> com sólida base técnica e acadêmica em desenvolvimento <0>Web e Mobile</0>. Especialista em <0>arquitetura de software</0>, <0>APIs RESTful</0>, <0>bancos de dados</0> e engenharia de sistemas escaláveis do <0>frontend ao backend</0>.",
+    "paragraph2": "Com experiência em <0>liderança técnica</0> e desenvolvimento ágil, aplico <0>Design Patterns</0>, <0>GitFlow</0> e pipelines <0>CI/CD</0>. Domínio do ecossistema <0>JavaScript/TypeScript</0> (<0>React</0>, <0>Next.js</0>, <0>Node.js</0>), desenvolvimento desktop com <0>Tauri</0> e automações via <0>n8n</0>.",
+    "paragraph3": "Foco em resolução de problemas complexos, engenharia de <0>ERPs</0> e automação de processos de negócio. Experiência prática na <0>integração de IA</0> para otimização de fluxos e geração de impacto mensurável."
   },
   "stats": {
-    "yearsExperience": {
-      "value": "10+",
-      "label": "Anos construindo aplicações em produção"
+    "best": {
+      "value": "4×",
+      "label": "Melhor do curso"
     },
-    "teamLead": {
-      "value": "Team Lead",
-      "label": "Gestão de times multidisciplinares"
+    "yearsExperience": {
+      "value": "3+",
+      "label": "Anos de experiência"
     },
     "projectsDelivered": {
-      "value": "50+",
+      "value": "100%",
       "label": "Projetos entregues em múltiplos domínios"
     },
-    "aiMl": {
-      "value": "IA & ML",
-      "label": "Integração e otimização de sistemas"
+    "teamLead": {
+      "value": "2×",
+      "label": "Liderança técnica"
     }
   },
   "projects": {
-    "cloudPlatform": {
-      "title": "Plataforma em Nuvem",
+    "projectOne": {
+      "title": "Barzêro",
       "description": "Plataforma de gerenciamento de infraestrutura em nuvem de nível corporativo, com monitoramento em tempo real e recursos de autoescalonamento."
     },
-    "aiAnalytics": {
-      "title": "Analytics com IA",
+    "projectTwo": {
+      "title": "Eiffel Lens",
       "description": "Dashboard analítico com machine learning para inteligência de negócios e geração de insights preditivos."
     },
-    "fintechApp": {
-      "title": "Aplicação FinTech",
-      "description": "Aplicação segura de serviços financeiros com transações em tempo real e integração com blockchain."
+    "projectThree": {
+      "title": "Structa",
+      "description": "A Structa é uma plataforma para gestão de demandas e problemas no ambiente escolar, centralizando solicitações, votações e acompanhamento de ocorrências em um único sistema. A plataforma promove comunicação, transparência e eficiência na resolução de demandas."
     }
   },
   "metrics": {
@@ -64,7 +64,7 @@
     "clientSatisfaction": "Satisfação dos clientes"
   },
   "contact": {
-    "title": "Vamos trabalhar juntas",
+    "title": "Vamos trabalhar juntos?",
     "description": "Estou sempre interessada em novas oportunidades, projetos desafiadores ou apenas em conversar sobre tecnologia.",
     "email": "Email",
     "location": "Localização",

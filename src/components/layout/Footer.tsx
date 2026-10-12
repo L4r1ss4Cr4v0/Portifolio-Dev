@@ -51,7 +51,11 @@ export function Footer() {
           <div className="flex justify-end items-center gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) =>
               label !== "contact.email" ? (
-                <CustomButton asChild key={label}>
+                <CustomButton
+                  asChild
+                  key={label}
+                  className="hover:border-[--hold-btn-border]"
+                >
                   <a href={href} target="_blank" aria-label={label}>
                     <Icon className="w-5 h-5" />
                   </a>
@@ -59,12 +63,12 @@ export function Footer() {
               ) : (
                 <CustomButton
                   key={label}
-                  icon={<Icon />}
+                  icon={<Icon className="hover:border-[--hold-btn-border]" />}
                   onClick={copyEmail}
                   showFloatingLabel={true}
                   floatingLabelText={copied ? "Email copiado" : "Copiar email"}
                 />
-              )
+              ),
             )}
           </div>
         </div>

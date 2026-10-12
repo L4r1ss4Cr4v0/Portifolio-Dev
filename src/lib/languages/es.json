@@ -20,38 +20,38 @@
   },
   "about": {
     "title": "Transformando ideas en <0>soluciones escalables</0>",
-    "paragraph1": "Como Tech Lead con más de una década de experiencia, me especializo en arquitectar sistemas robustos y liderar equipos de ingeniería para entregar productos de software excepcionales.",
-    "paragraph2": "Mi experiencia abarca desarrollo full-stack, infraestructura en la nube y tecnologías emergentes. Me apasiona el código limpio, la optimización del rendimiento y la creación de experiencias de usuario intuitivas.",
-    "paragraph3": "Actualmente enfocada en la construcción de aplicaciones con IA y en el establecimiento de buenas prácticas para el desarrollo moderno de software."
+    "paragraph1": "Soy Ingeniera de Software Full Stack, con formación técnica en Web y Mobile y la carrera de Ingeniería de Software en curso. Tengo experiencia en el desarrollo de aplicaciones Web y Mobile, arquitectura de sistemas, APIs RESTful, bases de datos e integración de tecnologías para crear soluciones robustas y escalables.",
+    "paragraph2": "También me desempeño en la dirección técnica de proyectos y equipos, aplicando buenas prácticas de arquitectura, Design Patterns, Git, CI/CD y metodologías ágiles. Tengo experiencia con React, Next.js, TypeScript, Node.js, Tauri, automatizaciones con n8n e integraciones con APIs y servicios externos.",
+    "paragraph3": "Mi trabajo está orientado a resolver problemas reales y generar un impacto medible, desde la automatización de procesos comerciales hasta el desarrollo de sistemas ERP. Además, cuento con experiencia en la aplicación de IA para la automatización de flujos y optimización de procesos."
   },
   "stats": {
-    "yearsExperience": {
-      "value": "10+",
-      "label": "Años construyendo aplicaciones en producción"
+    "best": {
+      "value": "4×",
+      "label": "El mejor del curso"
     },
-    "teamLead": {
-      "value": "Tech Lead",
-      "label": "Gestión de equipos multidisciplinarios"
+    "yearsExperience": {
+      "value": "3+",
+      "label": "Años de experiencia"
     },
     "projectsDelivered": {
-      "value": "50+",
+      "value": "100%",
       "label": "Proyectos entregados en múltiples dominios"
     },
-    "aiMl": {
-      "value": "IA & ML",
-      "label": "Integración y optimización de sistemas"
+    "teamLead": {
+      "value": "2×",
+      "label": "Liderazgo técnico"
     }
   },
   "projects": {
-    "cloudPlatform": {
+    "projectOne": {
       "title": "Plataforma en la Nube",
       "description": "Plataforma de gestión de infraestructura en la nube de nivel empresarial, con monitoreo en tiempo real y capacidades de autoescalado."
     },
-    "aiAnalytics": {
+    "projectTwo": {
       "title": "Analítica con IA",
       "description": "Panel analítico impulsado por machine learning para inteligencia de negocios y generación de insights predictivos."
     },
-    "fintechApp": {
+    "projectThree": {
       "title": "Aplicación FinTech",
       "description": "Aplicación segura de servicios financieros con transacciones en tiempo real e integración con blockchain."
     }
@@ -63,7 +63,7 @@
     "clientSatisfaction": "Satisfacción del cliente"
   },
   "contact": {
-    "title": "Trabajemos juntas",
+    "title": "Trabajemos juntos",
     "description": "Siempre estoy interesada en nuevas oportunidades, proyectos desafiantes o simplemente en conversar sobre tecnología.",
     "email": "Correo electrónico",
     "location": "Ubicación",
