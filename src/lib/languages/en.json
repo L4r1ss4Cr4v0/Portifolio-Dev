@@ -18,6 +18,59 @@
     "name": "Larissa Cravo",
     "description": "Experienced software engineer passionate about building scalable systems and leading high-performance teams."
   },
+  "experiencies": {
+    "title": "Experience",
+    "moderna": {
+      "period": "2024 — Present",
+      "role": "Intern → Full Stack Engineer",
+      "location": "Remote",
+      "description": "Worked as a <0>Full Stack Software Engineer</0> at Moderna Soluções, developing widgets and applications using <0>React, Tauri, and Python</0>, including a sales solution integrated with <0>Exact Sales</0>. Implemented workflow automations using <0>n8n and Twilio</0>, handling <0>10,000+ messages per month</0> and helping increase <0>qualified leads by 30%</0>, shorten the <0>sales cycle by 15%</0>, and secure <0>4 enterprise clients</0>.",
+      "tags": [
+        "Exact Sales",
+        "Python",
+        "Integration",
+        "Web Development",
+        "Process Automation",
+        "ERP",
+        "Twilio",
+        "Tortoise SVN"
+      ]
+    },
+    "monitoria": {
+      "period": "July – December 2026",
+      "role": "Introduction to Algorithms Teaching Assistant",
+      "company": "PUC Minas",
+      "location": "PUC Coreu",
+      "description": "Served as a <0>teaching assistant for Introduction to Algorithms</0>, a course taught by the Software Engineering program coordinator. Led tutoring sessions and mentored incoming students in <0>programming logic and problem-solving</0>. Collaborated with the course coordination team to strengthen learning outcomes and help first-year students adjust to university life.",
+      "tags": [
+        "Python",
+        "OOP",
+        "Pytest",
+        "Teaching",
+        "Pygame",
+        "Programming Logic"
+      ]
+    },
+    "guizi": {
+      "period": "2017 — 2020",
+      "role": "Web Developer",
+      "company": "Guizi Consultoria",
+      "location": "Remote",
+      "description": "Developed <0>responsive websites</0> for digital products, applying <0>SEO best practices and user experience optimization</0>. Contributed to audiovisual content production using <0>AI-powered tools</0> and integrated websites with applications and social media platforms.",
+      "tags": [
+        "Git",
+        "Code Review",
+        "SEO Fundamentals",
+        "Design",
+        "React Hooks",
+        "Analytics",
+        "Teamwork",
+        "Time Management for Digital Campaigns",
+        "Next.js",
+        "SCRUM"
+      ]
+    }
+  },
   "about": {
     "title": "Transforming ideas into <0>scalable solutions</0>",
     "paragraph1": "I am a Full Stack Software Engineer with a technical background in Web and Mobile, currently pursuing a degree in Software Engineering. I have experience in web and mobile app development, system architecture, RESTful APIs, databases, and technology integration to build robust and scalable solutions.",

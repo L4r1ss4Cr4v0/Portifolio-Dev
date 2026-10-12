@@ -18,6 +18,59 @@
     "name": "Larissa Cravo",
     "description": "Ingeniera de software con experiencia, apasionada por construir sistemas escalables y liderar equipos de alto rendimiento."
   },
+  "experiencies": {
+    "title": "Experiencia",
+    "moderna": {
+      "period": "2024 — Actualidad",
+      "role": "Practicante → Ingeniera Full Stack",
+      "location": "Remoto",
+      "description": "Trabajé como <0>ingeniera de software Full Stack</0> en Moderna Soluções, desarrollando widgets y aplicaciones con <0>React, Tauri y Python</0>, incluida una solución comercial integrada con <0>Exact Sales</0>. Implementé automatizaciones de procesos con <0>n8n y Twilio</0>, gestionando <0>más de 10.000 mensajes al mes</0> y contribuyendo a aumentar los <0>leads cualificados en un 30%</0>, reducir el <0>ciclo de ventas en un 15%</0> y captar <0>4 clientes Enterprise</0>.",
+      "tags": [
+        "Exact Sales",
+        "Python",
+        "Integración",
+        "Desarrollo web",
+        "Automatización de procesos",
+        "ERP",
+        "Twilio",
+        "Tortoise SVN"
+      ]
+    },
+    "monitoria": {
+      "period": "Julio – Diciembre de 2026",
+      "role": "Monitora de Introducción a los Algoritmos",
+      "company": "PUC Minas",
+      "location": "PUC Coreu",
+      "description": "Desempeñé el papel de <0>monitora de Introducción a los Algoritmos</0>, asignatura impartida por el coordinador del programa de Ingeniería de Software. Dirigí sesiones de refuerzo y orienté a estudiantes de nuevo ingreso en <0>lógica de programación y resolución de problemas</0>. Colaboré con la coordinación académica para reforzar el aprendizaje y facilitar la adaptación universitaria de los estudiantes de primer año.",
+      "tags": [
+        "Python",
+        "POO",
+        "Pytest",
+        "Didáctica",
+        "Pygame",
+        "Lógica de programación"
+      ]
+    },
+    "guizi": {
+      "period": "2017 — 2020",
+      "role": "Desarrolladora web",
+      "company": "Guizi Consultoria",
+      "location": "Remoto",
+      "description": "Desarrollé <0>sitios web adaptables</0> para productos digitales, aplicando <0>buenas prácticas de SEO y optimización de la experiencia de usuario</0>. Colaboré en la producción de contenido audiovisual mediante <0>herramientas de inteligencia artificial</0> y en la integración de sitios web con aplicaciones y redes sociales.",
+      "tags": [
+        "Git",
+        "Revisión de código",
+        "Fundamentos de SEO",
+        "Diseño",
+        "React Hooks",
+        "Analítica",
+        "Trabajo en equipo",
+        "Gestión del tiempo para campañas digitales",
+        "Next.js",
+        "SCRUM"
+      ]
+    }
+  },
   "about": {
     "title": "Transformando ideas en <0>soluciones escalables</0>",
     "paragraph1": "Soy Ingeniera de Software Full Stack, con formación técnica en Web y Mobile y la carrera de Ingeniería de Software en curso. Tengo experiencia en el desarrollo de aplicaciones Web y Mobile, arquitectura de sistemas, APIs RESTful, bases de datos e integración de tecnologías para crear soluciones robustas y escalables.",

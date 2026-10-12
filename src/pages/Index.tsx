@@ -8,6 +8,7 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { useEffect, useState } from "react";
+import { ExperienceSection } from "@/components/sections/ExperienciesSection";
 
 const Index = () => {
   const [isDark, setIsDark] = useState(false);
@@ -20,8 +21,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar isDark={isDark} toggleDark={() => setIsDark((prev) => !prev)} />
       <main>
-        <HeroSection  />
+        <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
         <ContactSection />

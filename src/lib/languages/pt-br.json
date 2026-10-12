@@ -19,6 +19,59 @@
     "name": "Larissa Cravo",
     "description": "Engenheira de software experiente, apaixonada por construir sistemas escaláveis e liderar times de alta performance."
   },
+  "experiencies": {
+    "title": "Experiências",
+    "moderna": {
+      "period": "2024 — Presente",
+      "role": "Estagiária -> Full Stack Engineer",
+      "location": "Remoto",
+      "description": "Atuei como <0>Engenheira de Software Full Stack</0> na Moderna Soluções, desenvolvendo widgets e aplicações com <0>React, Tauri e Python</0>, incluindo uma solução comercial integrada à <0>Exact Sales</0>. Implementei automações com <0>n8n e Twilio</0>, alcançando <0>mais de 10.000 mensagens mensais</0> e contribuindo para aumentar em <0>30% os leads qualificados</0>, reduzir em <0>15% o ciclo de vendas</0> e conquistar <0>4 clientes Enterprise</0>.",
+      "tags": [
+        "Exact Sales",
+        "Python",
+        "Integração",
+        "Desenvolvimento web",
+        "Automatização de Processos",
+        "ERP",
+        "Twilio",
+        "Tortoise SVN"
+      ]
+    },
+    "monitoria": {
+      "period": "Julho - Dezembro (2026)",
+      "role": "Monitora de Introdução a Algoritmos",
+      "company": "PUC Minas",
+      "location": "PUC Coreu",
+      "description": "Atuei como <0>monitora de Introdução a Algoritmos</0>, ministrada pelo coordenador de Engenharia de Software. Conduzi aulas de reforço e orientei alunos ingressantes em <0>lógica de programação e resolução de problemas</0>. Colaborei com a coordenação para fortalecer a aprendizagem e a adaptação acadêmica dos calouros.",
+      "tags": [
+        "Python",
+        "POO",
+        "Pytest",
+        "Didática",
+        "Pygame",
+        "Lógica de Programação"
+      ]
+    },
+    "guizi": {
+      "period": "2017 — 2020",
+      "role": "Desenvolvedora Web",
+      "company": "Guizi Consultoria",
+      "location": "Remoto",
+      "description": "Desenvolvi <0>websites responsivos</0> para produtos digitais, aplicando <0>SEO e otimização da experiência do usuário</0>. Colaborei na produção de conteúdo audiovisual com <0>ferramentas de IA</0> e na integração de websites com aplicações e redes sociais.",
+      "tags": [
+        "Git",
+        "Revisão de código",
+        "SEO Fundamentals",
+        "Design",
+        "React Hooks",
+        "Analítica",
+        "Trabalho em equipe",
+        "Time Management for Digital Campaigns",
+        "Next.js",
+        "SCRUM"
+      ]
+    }
+  },
   "about": {
     "title": "Transformando ideias em <0>soluções escaláveis</0>",
     "paragraph1": "<0>Engenheira de Software Full Stack</0> com sólida base técnica e acadêmica em desenvolvimento <0>Web e Mobile</0>. Especialista em <0>arquitetura de software</0>, <0>APIs RESTful</0>, <0>bancos de dados</0> e engenharia de sistemas escaláveis do <0>frontend ao backend</0>.",

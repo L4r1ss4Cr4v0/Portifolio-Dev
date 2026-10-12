@@ -9,6 +9,10 @@ import {
   Rocket,
   Brain,
   Trophy,
+  Computer,
+  Laptop,
+  School,
+  ChevronsLeftRightEllipsis,
 } from "lucide-react";
 
 export const EMAIL = "larissacravoccamara@gmail.com";
@@ -122,4 +126,22 @@ export const hightlights = [
   { key: "teamLead", icon: Users },
   { key: "projectsDelivered", icon: Rocket },
   { key: "best", icon: Trophy },
+];
+
+export const experiences = [
+  {
+    icon: Laptop,
+    key: "moderna",
+    company: "Moderna Soluções",
+  },
+  {
+    icon: School,
+    key: "monitoria",
+    company: "PUC Minas",
+  },
+  {
+    icon: ChevronsLeftRightEllipsis,
+    key: "guizi",
+    company: "Guizi Consultoria",
+  },
 ];
