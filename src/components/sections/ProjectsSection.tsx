@@ -1,27 +1,15 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { ParallaxTitle } from "../ParallaxTitle";
 import { DeviceFrame } from "../DeviceFrame";
 import { useTranslation } from "react-i18next";
-import { GITHUB, projects, techsTagsColors } from "@/lib/itens";
+import { projects, techsTagsColors } from "@/lib/itens";
 import { SkillBadge } from "../SkillBadge";
 import { CustomButton } from "../CustomButton";
-import { formatToSlug } from "@/lib/utils";
+import { ProjectPreview } from "../ProjectPreview";
 
 export function ProjectsSection() {
   const { t } = useTranslation();
-
-  function toGithub(name: string) {
-    const slug = formatToSlug(name);
-
-    const url = GITHUB + "/" + slug;
-
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
-
-  function openProject(url: string) {
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
 
   return (
     <section id="projects" className="py-24 px-6 relative overflow-hidden">
@@ -30,8 +18,11 @@ export function ProjectsSection() {
 
         <div className="mt-16 space-y-32">
           {projects.map((project, index) => {
-            const title = t(`projects.${project.key}.title`);
+            const title = project.name;
             const description = t(`projects.${project.key}.description`);
+
+            const hasLink = !!project.link;
+            const hasGithub = !!project.github;
 
             return (
               <motion.div
@@ -47,22 +38,22 @@ export function ProjectsSection() {
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <DeviceFrame
                     type="tablet"
-                    onProjectClick={() =>
-                      project.link && openProject(project.link)
+                    onProjectClick={
+                      hasLink
+                        ? () =>
+                            window.open(
+                              project.link!,
+                              "_blank",
+                              "noopener,noreferrer",
+                            )
+                        : undefined
                     }
                   >
-                    <div
-
-                      className={`bg-[url('/images/background.jpg')] w-full h-full bg-gradient-to-br ${project.color} flex items-center justify-center`}
-                    >
-                      <motion.div
-                        className="text-4xl font-bold text-foreground/20"
-                        animate={{ scale: [1, 1.02, 1] }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      >
-                        {title}
-                      </motion.div>
-                    </div>
+                    <ProjectPreview
+                      image={project.image}
+                      title={title}
+                      gradient={project["placeholder-color"]}
+                    />
                   </DeviceFrame>
                 </div>
 
@@ -89,13 +80,21 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="flex gap-4 pt-4">
-                    <CustomButton
-                      onClick={() => toGithub(title)}
-                      variant="filled"
-                      label={t("common.viewGithub")}
-                      icon={<Github className="w-4 h-4" />}
-                    />
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    {hasGithub && (
+                      <CustomButton
+                        onClick={() =>
+                          window.open(
+                            project.github!,
+                            "_blank",
+                            "noopener,noreferrer",
+                          )
+                        }
+                        variant="filled"
+                        label={t("common.viewGithub")}
+                        icon={<Github className="w-4 h-4" />}
+                      />
+                    )}
                   </div>
                 </div>
               </motion.div>

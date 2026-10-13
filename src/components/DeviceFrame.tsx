@@ -48,34 +48,38 @@ export function DeviceFrame({
         {children}
       </motion.div>
 
-      <motion.div
-        className="absolute inset-0 bg-black/30 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-      />
+      {!!onProjectClick && (
+        <motion.div
+          className="absolute inset-0 bg-black/30 pointer-events-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+        />
+      )}
 
-      <motion.button
-        className="absolute inset-0 m-auto 
+      {!!onProjectClick && (
+        <motion.button
+          className="absolute inset-0 m-auto 
                  w-fit h-fit
                  bg-white text-black font-semibold 
                  px-8 py-3 rounded-full shadow-lg"
-        initial={{ opacity: 0, scale: 0.8, y: 10 }}
-        animate={{
-          opacity: isHovered ? 1 : 0,
-          scale: isHovered ? 1 : 0.8,
-          y: isHovered ? 0 : 10,
-        }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 1 }}
-        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        onClick={(e) => {
-          e.stopPropagation();
-          onProjectClick && onProjectClick();
-        }}
-      >
-        {t("common.viewProject")}
-      </motion.button>
+          initial={{ opacity: 0, scale: 0.8, y: 10 }}
+          animate={{
+            opacity: isHovered ? 1 : 0,
+            scale: isHovered ? 1 : 0.8,
+            y: isHovered ? 0 : 10,
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          onClick={(e) => {
+            e.stopPropagation();
+            onProjectClick && onProjectClick();
+          }}
+        >
+          {t("common.viewProject")}
+        </motion.button>
+      )}
     </motion.div>
   );
 }

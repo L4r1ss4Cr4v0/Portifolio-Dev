@@ -96,17 +96,26 @@
     }
   },
   "projects": {
-    "projectOne": {
-      "title": "Barzêro",
-      "description": "Plataforma de gerenciamento de infraestrutura em nuvem de nível corporativo, com monitoramento em tempo real e recursos de autoescalonamento."
+    "structa": {
+      "description": "Structa is a platform for managing requests and issues in school environments, bringing requests, voting, and issue tracking together in one centralized system. The platform promotes communication, transparency, and efficiency in resolving school-related issues."
     },
-    "projectTwo": {
-      "title": "Eiffel Lens",
-      "description": "Dashboard analítico com machine learning para inteligência de negócios e geração de insights preditivos."
+    "barzero": {
+      "description": "Ever feel overwhelmed by the number of bars in Belo Horizonte? Discover new spots, explore the city's vibrant bar scene, and find the perfect place to hang out with friends. With venue recommendations and sample promotional coupons, your next night out is just a few clicks away!"
     },
-    "projectThree": {
-      "title": "Structa",
-      "description": "Aplicação segura de serviços financeiros com transações em tempo real e integração com blockchain."
+    "weatherapp": {
+      "description": "Real-time weather in Belo Horizonte, your way! Check local weather conditions and temperatures using data from the OpenWeatherMap API. Featuring an intuitive interface and light and dark mode support, the app combines up-to-date weather information, convenience, and a visual experience tailored to your preferences."
+    },
+    "contacteiapi": {
+      "description": "Your contacts, organized in a robust, scalable API! Contactei API is a RESTful API built to manage users, contacts, and groups in a structured way. Featuring full create, read, update, and delete (CRUD) operations, a modular architecture, and standardized error handling, the project demonstrates back-end development best practices, clear separation of responsibilities, and database integration."
+    },
+    "elitphoto": {
+      "description": "A photographer's website inspired by a pre-designed template, built to showcase photography through a clean, minimalist interface. The project explores visual image presentation, prioritizing a polished layout, intuitive navigation, and an experience centered on the photography itself."
+    },
+    "cinemust": {
+      "description": "Discover the movies you need to watch at least once in your life! CineMust is a movie search website inspired by classic must-watch movie lists, featuring 20 handpicked titles for film lovers looking to discover great movies. With an intuitive search experience, the project combines a passion for cinema with web development, making it easier to find your next favorite classic."
+    },
+    "eifflelens": {
+      "description": "Eiffel Lens is an API built with Node.js and MongoDB that integrates Google's Gemini AI to explore surreal images of the Eiffel Tower in a variety of settings. Inspired by Instagram-style posts, the application serves images alongside accessible alternative text and AI-generated descriptions, bringing together back-end development, API integration, and creativity."
     }
   },
   "metrics": {

@@ -40,7 +40,7 @@ export default function PDfViewer() {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-2 sm:px-6 ">
+      <div className="curriculum-scroll flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-2 sm:px-6 ">
         <span className="text-xs text-muted-foreground">Curriculum Vitae</span>
         <div className="flex items-center gap-1">
           <Button
@@ -94,7 +94,6 @@ export default function PDfViewer() {
           loading={
             <div className="flex h-72 items-center justify-center gap-3 text-sm text-muted-foreground">
               <Loader2 className="size-4 animate-spin" />
-              Opening curriculum
             </div>
           }
           error={
