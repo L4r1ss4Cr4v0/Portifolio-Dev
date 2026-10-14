@@ -8,6 +8,7 @@
   "navigation": {
     "home": "Início",
     "about": "Sobre mim",
+    "experiences": "Experiências",
     "projects": "Projetos",
     "skills": "Habilidades",
     "contact": "Contato",
@@ -19,8 +20,7 @@
     "name": "Larissa Cravo",
     "description": "Engenheira de software experiente, apaixonada por construir sistemas escaláveis e liderar times de alta performance."
   },
-  "experiencies": {
-    "title": "Experiências",
+  "experiences": {
     "moderna": {
       "period": "2024 — Presente",
       "role": "Estagiária -> Full Stack Engineer",
@@ -74,9 +74,9 @@
   },
   "about": {
     "title": "Transformando ideias em <0>soluções escaláveis</0>",
-    "paragraph1": "<0>Engenheira de Software Full Stack</0> com sólida base técnica e acadêmica em desenvolvimento <0>Web e Mobile</0>. Especialista em <0>arquitetura de software</0>, <0>APIs RESTful</0>, <0>bancos de dados</0> e engenharia de sistemas escaláveis do <0>frontend ao backend</0>.",
-    "paragraph2": "Com experiência em <0>liderança técnica</0> e desenvolvimento ágil, aplico <0>Design Patterns</0>, <0>GitFlow</0> e pipelines <0>CI/CD</0>. Domínio do ecossistema <0>JavaScript/TypeScript</0> (<0>React</0>, <0>Next.js</0>, <0>Node.js</0>), desenvolvimento desktop com <0>Tauri</0> e automações via <0>n8n</0>.",
-    "paragraph3": "Foco em resolução de problemas complexos, engenharia de <0>ERPs</0> e automação de processos de negócio. Experiência prática na <0>integração de IA</0> para otimização de fluxos e geração de impacto mensurável."
+    "paragraph1": "<0>Engenheira de Software Full Stack</0> com formação técnica pelo <0>Cotemig</0>, com imersão em <0>Desenvolvimento Web e Mobile</0>, e graduanda em <0>Engenharia de Software</0> pela <0>PUC Minas</0>. Possuo sólida base técnica e acadêmica em desenvolvimento de software, com foco em <0>arquitetura de software</0>, <0>APIs RESTful</0>, <0>bancos de dados</0> e engenharia de sistemas escaláveis, do <0>frontend ao backend</0>.",
+    "paragraph2": "Com experiência em <0>liderança técnica</0> e desenvolvimento ágil, aplico <0>Design Patterns</0>, <0>GitFlow</0> e pipelines <0>CI/CD</0>. Atuo principalmente com o ecossistema <0>JavaScript/TypeScript</0> (<0>React</0>, <0>Next.js</0>, <0>Node.js</0>), desenvolvimento desktop com <0>Tauri</0> e automações via <0>n8n</0>, buscando construir soluções eficientes, manuteníveis e alinhadas às necessidades do negócio.",
+    "paragraph3": "Tenho interesse em <0>arquitetura de software</0>, desenvolvimento de aplicações <0>Web e Mobile</0>, engenharia de <0>ERPs</0>, integração de <0>IA</0> e automação de processos de negócio. Meu objetivo profissional é evoluir continuamente como engenheira de software, aprimorar minhas competências técnicas e contribuir para o desenvolvimento de soluções escaláveis que gerem impacto mensurável por meio da tecnologia."
   },
   "stats": {
     "best": {

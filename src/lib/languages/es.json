@@ -7,6 +7,7 @@
   "navigation": {
     "home": "Inicio",
     "about": "Sobre mí",
+    "experiences": "Experiencias",
     "projects": "Proyectos",
     "skills": "Habilidades",
     "contact": "Contacto",
@@ -18,8 +19,7 @@
     "name": "Larissa Cravo",
     "description": "Ingeniera de software con experiencia, apasionada por construir sistemas escalables y liderar equipos de alto rendimiento."
   },
-  "experiencies": {
-    "title": "Experiencia",
+  "experiences": {
     "moderna": {
       "period": "2024 — Actualidad",
       "role": "Practicante → Ingeniera Full Stack",
@@ -73,9 +73,9 @@
   },
   "about": {
     "title": "Transformando ideas en <0>soluciones escalables</0>",
-    "paragraph1": "Soy Ingeniera de Software Full Stack, con formación técnica en Web y Mobile y la carrera de Ingeniería de Software en curso. Tengo experiencia en el desarrollo de aplicaciones Web y Mobile, arquitectura de sistemas, APIs RESTful, bases de datos e integración de tecnologías para crear soluciones robustas y escalables.",
-    "paragraph2": "También me desempeño en la dirección técnica de proyectos y equipos, aplicando buenas prácticas de arquitectura, Design Patterns, Git, CI/CD y metodologías ágiles. Tengo experiencia con React, Next.js, TypeScript, Node.js, Tauri, automatizaciones con n8n e integraciones con APIs y servicios externos.",
-    "paragraph3": "Mi trabajo está orientado a resolver problemas reales y generar un impacto medible, desde la automatización de procesos comerciales hasta el desarrollo de sistemas ERP. Además, cuento con experiencia en la aplicación de IA para la automatización de flujos y optimización de procesos."
+    "paragraph1": "<0>Ingeniera de Software Full Stack</0> con formación técnica en <0>Cotemig</0>, especializada en <0>Desarrollo Web y Mobile</0>, y actualmente cursando la carrera de <0>Ingeniería de Software</0> en <0>PUC Minas</0>. Cuento con una sólida base técnica y académica en desarrollo de software, con enfoque en <0>arquitectura de software</0>, <0>APIs RESTful</0>, <0>bases de datos</0> e ingeniería de sistemas escalables, tanto en el <0>frontend como en el backend</0>.",
+    "paragraph2": "Con experiencia en <0>liderazgo técnico</0> y desarrollo ágil, aplico <0>Design Patterns</0>, <0>GitFlow</0> y pipelines de <0>CI/CD</0>. Trabajo principalmente con el ecosistema <0>JavaScript/TypeScript</0> (<0>React</0>, <0>Next.js</0>, <0>Node.js</0>), desarrollo de aplicaciones de escritorio con <0>Tauri</0> y automatización de flujos de trabajo mediante <0>n8n</0>, creando soluciones eficientes, mantenibles y alineadas con las necesidades del negocio.",
+    "paragraph3": "Mis intereses profesionales incluyen la <0>arquitectura de software</0>, el desarrollo de aplicaciones <0>Web y Mobile</0>, la ingeniería de <0>sistemas ERP</0>, la integración de <0>IA</0> y la automatización de procesos de negocio. Mi objetivo profesional es seguir creciendo como ingeniera de software, fortalecer mis competencias técnicas y contribuir al desarrollo de soluciones escalables que generen un impacto medible a través de la tecnología."
   },
   "stats": {
     "best": {

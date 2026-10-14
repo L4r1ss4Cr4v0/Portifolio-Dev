@@ -8,8 +8,8 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { useEffect, useState } from "react";
-import { ExperienceSection } from "@/components/sections/ExperienciesSection";
 import { ResumeProvider } from "@/components/ResumeProvider";
+import { ExperiencesSection } from "@/components/sections/ExperiencesSection";
 
 const Index = () => {
   const [isDark, setIsDark] = useState(false);
@@ -25,7 +25,7 @@ const Index = () => {
         <main>
           <HeroSection />
           <AboutSection />
-          <ExperienceSection />
+          <ExperiencesSection />
           <ProjectsSection />
           <SkillsSection />
           <ContactSection />

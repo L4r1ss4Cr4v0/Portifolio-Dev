@@ -5,13 +5,13 @@ import { GlassCard } from "../GlassCard";
 import { experiences } from "@/lib/itens";
 import { Trans, useTranslation } from "react-i18next";
 
-export function ExperienceSection() {
+export function ExperiencesSection() {
   const { t } = useTranslation();
 
   return (
-    <section id="experience" className=" px-4 sm:px-6 relative">
+    <section id="experiences" className=" px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <ParallaxTitle>{t(`experiencies.title`)}</ParallaxTitle>
+        <ParallaxTitle>{t(`navigation.experiences`)}</ParallaxTitle>
 
         <div className="relative ">
           <div className="absolute left-5 top-0 bottom-0 w-px -translate-x-1/2 bg-[--bold]" />
@@ -40,11 +40,11 @@ export function ExperienceSection() {
                 <div className="ml-14 sm:ml-16 w-full">
                   <GlassCard className="p-6 sm:p-8">
                     <span className="inline-block px-3 py-1 text-xs font-mono uppercase tracking-wider bg-secondary rounded-full text-secondary-foreground mb-4">
-                      {t(`experiencies.${exp.key}.period`)}
+                      {t(`experiences.${exp.key}.period`)}
                     </span>
 
                     <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
-                      {t(`experiencies.${exp.key}.role`)}
+                      {t(`experiences.${exp.key}.role`)}
                     </h3>
 
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-base">
@@ -53,13 +53,13 @@ export function ExperienceSection() {
                       </span>
                       <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
                         <MapPin className="w-4 h-4" />
-                        {t(`experiencies.${exp.key}.location`)}
+                        {t(`experiences.${exp.key}.location`)}
                       </span>
                     </div>
 
                     <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                       <Trans
-                        i18nKey={`experiencies.${exp.key}.description`}
+                        i18nKey={`experiences.${exp.key}.description`}
                         components={[
                           <span className="text-[--bold] font-medium" />,
                         ]}
@@ -68,7 +68,7 @@ export function ExperienceSection() {
 
                     <div className="flex flex-wrap gap-2.5 mt-6">
                       {(
-                        t(`experiencies.${exp.key}.tags`, {
+                        t(`experiences.${exp.key}.tags`, {
                           returnObjects: true,
                         }) as string[]
                       ).map((tag) => (

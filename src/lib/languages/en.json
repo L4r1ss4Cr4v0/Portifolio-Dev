@@ -7,6 +7,7 @@
   "navigation": {
     "home": "Home",
     "about": "About Me",
+    "experiences": "Experiences",
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
@@ -18,8 +19,7 @@
     "name": "Larissa Cravo",
     "description": "Experienced software engineer passionate about building scalable systems and leading high-performance teams."
   },
-  "experiencies": {
-    "title": "Experience",
+  "experiences": {
     "moderna": {
       "period": "2024 — Present",
       "role": "Intern → Full Stack Engineer",
@@ -72,10 +72,10 @@
     }
   },
   "about": {
-    "title": "Transforming ideas into <0>scalable solutions</0>",
-    "paragraph1": "I am a Full Stack Software Engineer with a technical background in Web and Mobile, currently pursuing a degree in Software Engineering. I have experience in web and mobile app development, system architecture, RESTful APIs, databases, and technology integration to build robust and scalable solutions.",
-    "paragraph2": "I also act in technical project and team leadership, applying architecture best practices, Design Patterns, Git, CI/CD, and agile methodologies. I have experience with React, Next.js, TypeScript, Node.js, Tauri, automation with n8n, and external API and service integrations.",
-    "paragraph3": "My work focuses on solving real-world problems and delivering measurable impact, from commercial process automation to ERP system development. I also have experience applying AI to workflow automation and process optimization."
+    "title": "Turning ideas into <0>scalable solutions</0>",
+    "paragraph1": "<0>Full Stack Software Engineer</0> with a technical background from <0>Cotemig</0>, specializing in <0>Web and Mobile Development</0>, and currently pursuing a degree in <0>Software Engineering</0> at <0>PUC Minas</0>. I have a strong technical and academic foundation in software development, focusing on <0>software architecture</0>, <0>RESTful APIs</0>, <0>databases</0>, and scalable system engineering across the <0>frontend and backend</0>.",
+    "paragraph2": "With experience in <0>technical leadership</0> and agile development, I apply <0>Design Patterns</0>, <0>GitFlow</0>, and <0>CI/CD</0> pipelines. I primarily work with the <0>JavaScript/TypeScript</0> ecosystem (<0>React</0>, <0>Next.js</0>, <0>Node.js</0>), desktop application development with <0>Tauri</0>, and workflow automation using <0>n8n</0>, building efficient, maintainable solutions aligned with business needs.",
+    "paragraph3": "My professional interests include <0>software architecture</0>, <0>Web and Mobile application development</0>, <0>ERP systems engineering</0>, <0>AI integration</0>, and business process automation. My career goal is to continuously grow as a software engineer, strengthen my technical skills, and contribute to building scalable solutions that deliver measurable business impact through technology."
   },
   "stats": {
     "best": {

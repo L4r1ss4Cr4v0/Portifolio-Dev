@@ -43,7 +43,7 @@ export function Navbar({ isDark, toggleDark }: Props) {
 
   return (
     <motion.header
-      className="fixed top-6 right-0 -translate-x-1/2 z-50 w-[95%] max-w-4xl"
+      className="fixed top-6 right-0 -translate-x-1/2 z-50 w-[95%] max-w-5xl"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}

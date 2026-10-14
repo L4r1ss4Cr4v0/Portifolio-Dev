@@ -61,6 +61,7 @@ export const skills = ["React", "TypeScript", "Node.js", "Python", "Docker"];
 export const navItems = [
   { label: "navigation.home", href: "#home" },
   { label: "navigation.about", href: "#about" },
+  { label: "navigation.experiences", href: "#experiences" },
   { label: "navigation.projects", href: "#projects" },
   { label: "navigation.skills", href: "#skills" },
   { label: "navigation.contact", href: "#contact" },
