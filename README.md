@@ -2,23 +2,93 @@
 
 Portfólio pessoal de **Larissa Cravo Carvalho Câmara Santos**, Engenheira de Software Full Stack, desenvolvido como uma _single page application_ multilíngue, responsiva e com animações. O site apresenta perfil profissional, experiências, projetos, habilidades técnicas, currículo em PDF e um formulário de contato.
 
-🌐 **Site:** [l4r1ss4cr4v0.dev](https://l4r1ss4cr4v0.dev)
+🌐 **Site publicado:** [l4r1ss4cr4v0.dev](https://l4r1ss4cr4v0.dev)
 
 ---
 
 ## Sumário
 
+- [Descrição do projeto](#descrição-do-projeto)
+- [Protótipos](#protótipos)
+- [Estrutura do site](#estrutura-do-site)
 - [Funcionalidades](#funcionalidades)
-- [Seções do site](#seções-do-site)
-- [Tecnologias](#tecnologias)
+- [Tecnologias previstas e utilizadas](#tecnologias-previstas-e-utilizadas)
+- [Dependências e bibliotecas](#dependências-e-bibliotecas)
 - [Projetos em destaque](#projetos-em-destaque)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Como executar localmente](#como-executar-localmente)
+- [Estrutura de diretórios](#estrutura-de-diretórios)
+- [Instalação e execução local](#instalação-e-execução-local)
 - [Variáveis de ambiente](#variáveis-de-ambiente)
 - [Scripts disponíveis](#scripts-disponíveis)
 - [Internacionalização](#internacionalização)
-- [Deploy](#deploy)
+- [Deploy e acesso na nuvem](#deploy-e-acesso-na-nuvem)
 - [Contato](#contato)
+
+---
+
+## Descrição do projeto
+
+Este projeto é o portfólio profissional de Larissa, criado para reunir em um só lugar sua trajetória, seus projetos e suas habilidades, facilitando o contato com recrutadores, clientes e colegas de área.
+
+**Objetivos**
+
+- Apresentar o perfil profissional, a formação e as experiências de forma clara e atrativa.
+- Exibir projetos com descrição, tecnologias, imagens e links para demonstração e repositório.
+- Oferecer o currículo em PDF nos três idiomas do site.
+- Disponibilizar um canal de contato direto, com proteção contra spam.
+
+**Público-alvo:** recrutadores, empresas, clientes e profissionais da área de tecnologia.
+
+---
+
+## Protótipos
+
+Antes do desenvolvimento, o layout do site foi planejado em protótipos de baixa e alta fidelidade.
+
+🎨 **Protótipo navegável (Figma):** [adicionar link do Figma](https://www.figma.com/)
+
+### Versão desktop
+
+| Início | Sobre mim | Projetos |
+| :----: | :-------: | :------: |
+| ![Protótipo desktop - Início](docs/prototipos/desktop-inicio.png) | ![Protótipo desktop - Sobre mim](docs/prototipos/desktop-sobre.png) | ![Protótipo desktop - Projetos](docs/prototipos/desktop-projetos.png) |
+
+### Versão mobile
+
+| Início | Projetos | Contato |
+| :----: | :------: | :-----: |
+| ![Protótipo mobile - Início](docs/prototipos/mobile-inicio.png) | ![Protótipo mobile - Projetos](docs/prototipos/mobile-projetos.png) | ![Protótipo mobile - Contato](docs/prototipos/mobile-contato.png) |
+
+### Resultado final
+
+| Tema claro | Tema escuro |
+| :--------: | :---------: |
+| ![Site publicado - tema claro](docs/prototipos/final-claro.png) | ![Site publicado - tema escuro](docs/prototipos/final-escuro.png) |
+
+> 📌 Salve as imagens na pasta `docs/prototipos/` com os nomes acima (ou ajuste os caminhos).
+
+---
+
+## Estrutura do site
+
+O site é uma página única, com navegação por âncoras entre as seções, e uma página 404 personalizada para rotas inexistentes.
+
+```mermaid
+flowchart LR
+    A[Início] --> B[Sobre mim] --> C[Experiências] --> D[Projetos] --> E[Habilidades] --> F[Contato]
+    N[Navbar fixa<br/>idioma · tema · âncoras] -.-> A
+    R[Rodapé] -.-> F
+```
+
+| Seção            | Conteúdo                                                                         |
+| ---------------- | -------------------------------------------------------------------------------- |
+| **Início**       | Apresentação, cargo, foto de perfil e links para LinkedIn, GitHub e WhatsApp     |
+| **Sobre mim**    | Formação, áreas de interesse e indicadores de destaque                           |
+| **Experiências** | Moderna Soluções, monitoria na PUC Minas e Guizi Consultoria                     |
+| **Projetos**     | Cards com descrição, tecnologias, imagem e links para demo e repositório         |
+| **Habilidades**  | Tecnologias organizadas em Frontend, Backend, Mobile, Cloud & DevOps e Data & AI |
+| **Contato**      | Informações de contato e formulário de mensagem                                  |
+
+**Elementos globais:** barra de navegação com seletor de idioma e alternância de tema, rodapé e modal de visualização do currículo.
 
 ---
 
@@ -33,18 +103,9 @@ Portfólio pessoal de **Larissa Cravo Carvalho Câmara Santos**, Engenheira de S
 - **Página 404** personalizada.
 - **SEO básico** com `robots.txt` liberando os principais rastreadores e redes sociais.
 
-## Seções do site
+---
 
-| Seção            | Conteúdo                                                                         |
-| ---------------- | -------------------------------------------------------------------------------- |
-| **Início**       | Apresentação, cargo, foto de perfil e links para LinkedIn, GitHub e WhatsApp     |
-| **Sobre mim**    | Formação, áreas de interesse e indicadores de destaque                           |
-| **Experiências** | Moderna Soluções, monitoria na PUC Minas e Guizi Consultoria                     |
-| **Projetos**     | Cards com descrição, tecnologias, imagem e links para demo e repositório         |
-| **Habilidades**  | Tecnologias organizadas em Frontend, Backend, Mobile, Cloud & DevOps e Data & AI |
-| **Contato**      | Informações de contato e formulário de mensagem                                  |
-
-## Tecnologias
+## Tecnologias previstas e utilizadas
 
 **Base**
 
@@ -73,6 +134,55 @@ Portfólio pessoal de **Larissa Cravo Carvalho Câmara Santos**, Engenheira de S
 - [ESLint](https://eslint.org/) com `typescript-eslint`
 - [Vitest](https://vitest.dev/) + Testing Library
 
+**Design e hospedagem**
+
+- [Figma](https://www.figma.com/) para os protótipos
+- [GitHub](https://github.com/) para versionamento e [Vercel](https://vercel.com/) para publicação
+
+---
+
+## Dependências e bibliotecas
+
+Relação das principais dependências do projeto. As versões exatas estão no arquivo [`package.json`](./package.json).
+
+### Dependências de produção
+
+| Pacote                                   | Versão      | Uso                                        |
+| ---------------------------------------- | ----------- | ------------------------------------------ |
+| `react` / `react-dom`                    | ^18.x       | Biblioteca de interface                    |
+| `react-router-dom`                       | ^x.x.x      | Roteamento                                 |
+| `tailwindcss-animate`                    | ^x.x.x      | Utilitários de animação para o Tailwind    |
+| `@radix-ui/*`                            | ^x.x.x      | Primitivos de UI acessíveis (via shadcn/ui)|
+| `framer-motion` / `motion`               | ^x.x.x      | Animações                                  |
+| `lucide-react`                           | ^x.x.x      | Ícones                                     |
+| `flag-icons`                             | ^x.x.x      | Bandeiras dos idiomas                      |
+| `next-themes`                            | ^x.x.x      | Tema claro e escuro                        |
+| `sonner`                                 | ^x.x.x      | Notificações (toasts)                      |
+| `vaul`                                   | ^x.x.x      | Drawer / menu mobile                       |
+| `i18next` / `react-i18next`              | ^x.x.x      | Internacionalização                        |
+| `react-pdf`                              | ^x.x.x      | Visualização do currículo em PDF           |
+| `@emailjs/browser`                       | ^x.x.x      | Envio de e-mails pelo formulário           |
+| `react-google-recaptcha`                 | ^x.x.x      | Proteção anti-spam                         |
+| `react-hook-form` / `zod`                | ^x.x.x      | Formulários e validação                    |
+| `@tanstack/react-query`                  | ^x.x.x      | Gerenciamento de requisições               |
+
+### Dependências de desenvolvimento
+
+| Pacote                                   | Versão      | Uso                                        |
+| ---------------------------------------- | ----------- | ------------------------------------------ |
+| `vite`                                   | ^5.x        | Bundler e servidor de desenvolvimento      |
+| `@vitejs/plugin-react-swc`               | ^x.x.x      | Compilação React com SWC                   |
+| `typescript`                             | ^x.x.x      | Tipagem estática                           |
+| `tailwindcss` / `postcss` / `autoprefixer` | ^3.x      | Estilização                                |
+| `@tailwindcss/typography`                | ^x.x.x      | Estilos de texto                           |
+| `eslint` / `typescript-eslint`           | ^x.x.x      | Análise estática                           |
+| `vitest`                                 | ^x.x.x      | Testes                                     |
+| `@testing-library/react`                 | ^x.x.x      | Testes de componentes                      |
+
+> 📌 Substitua os `x.x.x` pelas versões que aparecem no seu `package.json`.
+
+---
+
 ## Projetos em destaque
 
 Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts`:
@@ -87,10 +197,14 @@ Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts`:
 | **CineMust**      | Site de busca com 20 filmes imperdíveis                                               | HTML, CSS, JavaScript, JSON                                    |
 | **Eiffel Lens**   | API que usa IA (Gemini) para explorar imagens surreais da Torre Eiffel                | Node.js, MongoDB, Gemini API                                   |
 
-## Estrutura do projeto
+---
+
+## Estrutura de diretórios
 
 ```text
 .
+├── docs/
+│   └── prototipos/          # Imagens dos protótipos (desktop, mobile e resultado final)
 ├── public/
 │   ├── files/               # Currículos em PDF (ptBR, en, es)
 │   ├── projects/            # Imagens dos projetos
@@ -112,14 +226,17 @@ Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts`:
 │   ├── App.tsx
 │   └── main.tsx
 ├── CNAME                    # Domínio personalizado (l4r1ss4cr4v0.dev)
+├── package.json             # Dependências e scripts
 ├── tailwind.config.ts
 ├── vite.config.ts
 └── vitest.config.ts
 ```
 
-## Como executar localmente
+---
 
-**Pré-requisitos:** [Node.js](https://nodejs.org/) 18 ou superior e npm.
+## Instalação e execução local
+
+**Pré-requisitos:** [Node.js](https://nodejs.org/) 18 ou superior, npm e [Git](https://git-scm.com/).
 
 ```bash
 # 1. Clone o repositório
@@ -137,6 +254,15 @@ npm run dev
 
 O site ficará disponível em `http://localhost:8080`.
 
+Para testar a versão de produção localmente:
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
 ## Variáveis de ambiente
 
 Crie um arquivo `.env` na raiz do projeto. Ele é necessário para o funcionamento do formulário de contato:
@@ -150,6 +276,8 @@ VITE_RECAPTCHA_SITE_KEY=sua_site_key
 
 > ⚠️ Variáveis com prefixo `VITE_` são incluídas no código enviado ao navegador. Use apenas chaves **públicas** e nunca versione o arquivo `.env`.
 
+---
+
 ## Scripts disponíveis
 
 | Comando              | Descrição                                          |
@@ -161,6 +289,8 @@ VITE_RECAPTCHA_SITE_KEY=sua_site_key
 | `npm run lint`       | Executa o ESLint                                   |
 | `npm test`           | Executa os testes uma vez com o Vitest             |
 | `npm run test:watch` | Executa os testes em modo _watch_                  |
+
+---
 
 ## Internacionalização
 
@@ -174,13 +304,19 @@ As traduções ficam em `src/lib/languages/`:
 
 Para alterar textos, edite o JSON do idioma correspondente. Dados que não dependem de idioma (links, tecnologias, nomes de projetos) ficam em `src/lib/itens.ts`. Para adicionar um novo idioma, crie o arquivo JSON, registre-o em `i18n.ts` e inclua-o na lista `languages` de `itens.ts`.
 
-## Deploy
+---
+
+## Deploy e acesso na nuvem
+
+🌐 **Acesse o site publicado:** [https://l4r1ss4cr4v0.dev](https://l4r1ss4cr4v0.dev)
 
 O projeto é publicado na [Vercel](https://vercel.com/) a partir do repositório no GitHub, com o domínio personalizado **l4r1ss4cr4v0.dev** (definido no arquivo `CNAME`).
 
 - **Comando de build:** `npm run build`
 - **Diretório de saída:** `dist`
 - **Variáveis de ambiente:** configure as mesmas chaves do `.env` no painel do projeto na Vercel.
+
+---
 
 ## Contato
 
