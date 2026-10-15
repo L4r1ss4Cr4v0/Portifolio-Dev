@@ -14,6 +14,7 @@ interface TiltedCardProps {
   containerWidth?: React.CSSProperties["width"];
   imageHeight?: React.CSSProperties["height"];
   imageWidth?: React.CSSProperties["width"];
+  aspectRatio?: React.CSSProperties["aspectRatio"];
   scaleOnHover?: number;
   rotateAmplitude?: number;
   showMobileWarning?: boolean;
@@ -36,6 +37,7 @@ export default function TiltedCard({
   containerWidth = "100%",
   imageHeight = "300px",
   imageWidth = "300px",
+  aspectRatio,
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
@@ -95,7 +97,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center "
+      className="relative w-full max-w-full [perspective:800px] flex flex-col items-center justify-center"
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -114,7 +116,9 @@ export default function TiltedCard({
         className="relative [transform-style:preserve-3d]"
         style={{
           width: imageWidth,
-          height: imageHeight,
+          height: aspectRatio ? undefined : imageHeight,
+          aspectRatio,
+          maxWidth: "100%",
           rotateX,
           rotateY,
           scale,
@@ -123,11 +127,7 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
-          className="absolute top-0 left-0 object-cover will-change-transform [transform:translateZ(0)] rounded-[10em] overflow-hidden border-8 border-secondary shadow-2xl shadow-zinc-700"
-          style={{
-            width: imageWidth,
-            height: imageHeight,
-          }}
+          className="absolute top-0 left-0 w-full h-full object-cover will-change-transform [transform:translateZ(0)] rounded-[10em] overflow-hidden border-8 border-secondary shadow-2xl shadow-zinc-700"
           draggable="false"
         />
 

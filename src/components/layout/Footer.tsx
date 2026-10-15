@@ -19,7 +19,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-primary text-primary-foreground py-16 px-20">
+    <footer className="bg-primary text-primary-foreground py-12 md:py-16 px-6 sm:px-10 md:px-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

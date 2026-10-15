@@ -20,7 +20,7 @@ const Index = () => {
 
   return (
     <ResumeProvider>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background overflow-x-clip">
         <Navbar isDark={isDark} toggleDark={() => setIsDark((prev) => !prev)} />
         <main>
           <HeroSection />
