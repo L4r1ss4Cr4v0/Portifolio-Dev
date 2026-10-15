@@ -140,7 +140,9 @@
       "subjectPlaceholder": "¿De qué se trata?",
       "messageLabel": "Mensaje",
       "messagePlaceholder": "Cuéntame sobre la oportunidad...",
-      "submitButton": "Enviar"
+      "submitButton": "Enviar",
+      "success": "¡Correo electrónico enviado correctamente!",
+      "captchaError": "Marca 'No soy un robot' antes de enviar"
     }
   },
   "footer": {

@@ -140,7 +140,9 @@
       "subjectPlaceholder": "What is it about?",
       "messageLabel": "Message",
       "messagePlaceholder": "Tell me about the opportunity...",
-      "submitButton": "Send"
+      "submitButton": "Send",
+      "success": "Email sent successfully!",
+      "captchaError": "Please check 'I'm not a robot' before submitting"
     }
   },
   "footer": {

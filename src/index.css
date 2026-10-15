@@ -77,6 +77,9 @@
 
     --bold: #000;
     --hold-btn-border: 0 0% 100% / 0.8;
+
+    --send-button: #000;
+    --send-button-text: #000;
   }
 
   .dark {
@@ -114,6 +117,9 @@
 
     --glass-bg: 0 0% 10% / 0.8;
     --glass-border: 0 0% 100% / 0.1;
+
+    --send-button: #e85d8f;
+    --send-button-text: #ffff;
   }
 
   .curriculum-dialog {
@@ -138,6 +144,8 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   html::-webkit-scrollbar {
@@ -152,6 +160,19 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-display);
+    overflow-x: hidden;
+    overflow-x: clip;
+    width: 100%;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  img,
+  video {
+    max-width: 100%;
   }
 
   body::selection {
@@ -186,7 +207,7 @@
   }
 
   .section-title {
-    @apply text-7xl md:text-9xl font-bold tracking-tight;
+    @apply text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight;
     color: hsl(0 0% 92%);
     font-family: var(--font-display);
   }
@@ -194,6 +215,30 @@
   .parallax-title {
     will-change: transform;
     transform: translateZ(0);
+  }
+}
+
+/* Navbar: breakpoint personalizado (abaixo de 1100px usa menu mobile) */
+.site-header .nav-desktop {
+  display: none;
+}
+
+.site-header .nav-mobile {
+  display: flex;
+}
+
+.site-header .nav-mobile-panel {
+  display: block;
+}
+
+@media (min-width: 1100px) {
+  .site-header .nav-desktop {
+    display: flex;
+  }
+
+  .site-header .nav-mobile,
+  .site-header .nav-mobile-panel {
+    display: none;
   }
 }
 

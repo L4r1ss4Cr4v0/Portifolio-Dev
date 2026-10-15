@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import { ParallaxTitle } from "../ParallaxTitle";
 import { GlassCard } from "../GlassCard";
 import { useTranslation } from "react-i18next";
-import { CustomButton } from "../CustomButton";
 import { contactInfo } from "@/lib/itens";
-import CustomForms from "../CustomForms";
-import { Circle } from "lucide-react";
+import CustomForms, { type FormStatus } from "../CustomForms";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 import CircleShape from "../CircleShape";
 
 export function ContactSection() {
   const { t } = useTranslation();
+  const [formStatus, setFormStatus] = useState<FormStatus>("idle");
   return (
     <section id="contact" className="py-24 px-6 relative">
       <div className="max-w-6xl mx-auto ">
@@ -67,9 +68,18 @@ export function ContactSection() {
             transition={{ duration: 0.6 }}
             className="pos-absolute "
           >
-            <CircleShape />
-            <GlassCard className="p-8 z-50 " hover={false}>
-              <CustomForms />
+            {/* <CircleShape /> */}
+            <GlassCard
+              className={cn(
+                "p-8 z-50 transition-[border-color,box-shadow] duration-300",
+                formStatus === "error" &&
+                  "border-red-500 shadow-[0_0_0_1px_rgba(239,68,68,0.4),0_0_24px_rgba(239,68,68,0.25)]",
+                formStatus === "success" &&
+                  "border-green-500 shadow-[0_0_0_1px_rgba(34,197,94,0.4),0_0_24px_rgba(34,197,94,0.25)]",
+              )}
+              hover={false}
+            >
+              <CustomForms onStatusChange={setFormStatus} />
             </GlassCard>
           </motion.div>
         </div>

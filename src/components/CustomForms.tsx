@@ -1,11 +1,16 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { sendForm } from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import FormAlert from "@/components/FormAlert";
 import { CustomButton } from "./CustomButton";
 
 type AlertState = { type: "error" | "success"; message: string } | null;
+
+export type FormStatus = "idle" | "error" | "success";
+
+type CustomFormsProps = {
+  onStatusChange?: (status: FormStatus) => void;
+};
 
 const recaptchaLang: Record<string, string> = {
   ptBR: "pt-BR",
@@ -14,7 +19,7 @@ const recaptchaLang: Record<string, string> = {
   es: "es",
 };
 
-export default function CustomForms() {
+export default function CustomForms({ onStatusChange }: CustomFormsProps) {
   const { t, i18n } = useTranslation();
   const form = useRef<HTMLFormElement>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -28,10 +33,14 @@ export default function CustomForms() {
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
+  const status: FormStatus = alert?.type ?? (captchaError ? "error" : "idle");
+
+  useEffect(() => {
+    onStatusChange?.(status);
+  }, [status, onStatusChange]);
+
   function getErrorMessage(error: { status?: number; text?: string }) {
-    // Sem status = a requisição nem chegou ao servidor (rede caiu, bloqueio...)
     if (!error?.status) return t("contact.form.errors.network");
-    if (error.status === 429) return t("contact.form.errors.tooManyRequests");
     if (error.status === 400 || error.status === 412)
       return t("contact.form.errors.invalidRequest");
     if (error.status >= 500) return t("contact.form.errors.server");
@@ -67,13 +76,13 @@ export default function CustomForms() {
 
   return (
     <form className="space-y-6" ref={form} onSubmit={sendEmail}>
+      {captchaError && (
+        <p className=" text-red-500 text-center">
+          {t("contact.form.captchaError")}
+        </p>
+      )}
       {alert && (
-        <FormAlert
-          type={alert.type}
-          message={alert.message}
-          onClose={() => setAlert(null)}
-          autoCloseMs={alert.type === "success" ? 6000 : undefined}
-        />
+        <p className="text-green-600 text-center mb-8">{alert.message}</p>
       )}
       <div className="grid sm:grid-cols-2 gap-4">
         <div className="space-y-2">
@@ -139,18 +148,28 @@ export default function CustomForms() {
           }}
           onExpired={() => setCaptchaToken(null)}
         />
-        {captchaError && (
-          <p className="text-sm text-red-500">
-            {t("contact.form.captchaError")}
-          </p>
-        )}
       </div>
-
-      <CustomButton
-        type="submit"
-        variant="glass"
-        label={t("contact.form.submitButton")}
-      />
+      {captchaError ? (
+        <CustomButton
+          type="submit"
+          variant="glass"
+          className="border-red-600 text-red-600 after:bg-red-600"
+          label={t("contact.form.submitButton")}
+        />
+      ) : alert ? (
+        <CustomButton
+          type="submit"
+          variant="glass"
+          className="border-green-600 text-green-600 after:bg-green-600"
+          label={t("contact.form.submitButton")}
+        />
+      ) : (
+        <CustomButton
+          type="submit"
+          variant="glass"
+          label={t("contact.form.submitButton")}
+        />
+      )}
     </form>
   );
 }

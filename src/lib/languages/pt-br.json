@@ -142,7 +142,9 @@
       "subjectPlaceholder": "Sobre o que é?",
       "messageLabel": "Mensagem",
       "messagePlaceholder": "Conte-me sobre a oportunidade...",
-      "submitButton": "Enviar"
+      "submitButton": "Enviar",
+      "success": "Email enviado com sucesso!",
+      "captchaError": "Clique em 'Não sou um robô' antes de enviar"
     }
   },
   "footer": {

@@ -20,8 +20,8 @@ const buttonVariants = {
   glass: `
     relative
     px-[60px] py-[10px]
-    border-2 border-black
-    text-black
+    border-2 border-[--send-button]
+    text-[--send-button-text]
     font-semibold
     bg-transparent
     rounded-full
@@ -32,7 +32,7 @@ const buttonVariants = {
     after:content-['']
     after:absolute
     after:inset-0
-    after:bg-black
+    after:bg-[--send-button]
     after:scale-x-0
     after:origin-left
     after:transition-transform
