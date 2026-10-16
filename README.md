@@ -42,29 +42,29 @@ Este projeto é o portfólio profissional de Larissa, criado para reunir em um s
 
 ## Protótipos
 
-Antes do desenvolvimento, o layout do site foi planejado em protótipos de baixa e alta fidelidade.
+Antes do desenvolvimento, o layout do site foi planejado em protótipos no Figma. As imagens abaixo mostram as telas nas versões desktop (1440 px) e mobile (390 px), capturadas do site já implementado a partir desse layout.
 
-🎨 **Protótipo navegável (Figma):** [adicionar link do Figma](https://www.figma.com/)
+🎨 **Protótipo navegável (Figma):** [Link do protótipo no Figma](https://www.figma.com/design/7PN7EYzUP7h7WLNSm5tiJK/Prototipo-Portifolio?node-id=6-2&t=zR1OPdVDMcOEBP2z-1)
 
 ### Versão desktop
 
-| Início | Sobre mim | Projetos |
-| :----: | :-------: | :------: |
-| ![Protótipo desktop - Início](docs/prototipos/desktop-inicio.png) | ![Protótipo desktop - Sobre mim](docs/prototipos/desktop-sobre.png) | ![Protótipo desktop - Projetos](docs/prototipos/desktop-projetos.png) |
+|                            Início                             |                            Sobre mim                            |                             Projetos                              |
+| :-----------------------------------------------------------: | :-------------------------------------------------------------: | :---------------------------------------------------------------: |
+| ![Protótipo desktop - Início](public/images/inicio-claro.png) | ![Protótipo desktop - Sobre mim](public/images/sobre-claro.png) | ![Protótipo desktop - Projetos](public/images/projetos-claro.png) |
 
 ### Versão mobile
 
-| Início | Projetos | Contato |
-| :----: | :------: | :-----: |
-| ![Protótipo mobile - Início](docs/prototipos/mobile-inicio.png) | ![Protótipo mobile - Projetos](docs/prototipos/mobile-projetos.png) | ![Protótipo mobile - Contato](docs/prototipos/mobile-contato.png) |
+|                            Início                             |                             Projetos                              |                             Contato                             |
+| :-----------------------------------------------------------: | :---------------------------------------------------------------: | :-------------------------------------------------------------: |
+| ![Protótipo mobile - Início](public/images/inicio-mobile.png) | ![Protótipo mobile - Projetos](public/images/projetos-mobile.png) | ![Protótipo mobile - Contato](public/images/contato-mobile.png) |
 
 ### Resultado final
 
-| Tema claro | Tema escuro |
-| :--------: | :---------: |
-| ![Site publicado - tema claro](docs/prototipos/final-claro.png) | ![Site publicado - tema escuro](docs/prototipos/final-escuro.png) |
+|                            Tema claro                             |                             Tema escuro                              |
+| :---------------------------------------------------------------: | :------------------------------------------------------------------: |
+| ![Site publicado - tema claro](public/images/publicado-claro.png) | ![Site publicado - tema escuro](/public/images/publicado-escuro.png) |
 
-> 📌 Salve as imagens na pasta `docs/prototipos/` com os nomes acima (ou ajuste os caminhos).
+> As imagens ficam em `docs/prototipos/`. Para exibir também as telas originais do Figma, exporte-as como PNG para essa pasta, mantendo os mesmos nomes de arquivo.
 
 ---
 
@@ -147,45 +147,43 @@ Relação das principais dependências do projeto. As versões exatas estão no 
 
 ### Dependências de produção
 
-| Pacote                                   | Versão      | Uso                                        |
-| ---------------------------------------- | ----------- | ------------------------------------------ |
-| `react` / `react-dom`                    | ^18.x       | Biblioteca de interface                    |
-| `react-router-dom`                       | ^x.x.x      | Roteamento                                 |
-| `tailwindcss-animate`                    | ^x.x.x      | Utilitários de animação para o Tailwind    |
-| `@radix-ui/*`                            | ^x.x.x      | Primitivos de UI acessíveis (via shadcn/ui)|
-| `framer-motion` / `motion`               | ^x.x.x      | Animações                                  |
-| `lucide-react`                           | ^x.x.x      | Ícones                                     |
-| `flag-icons`                             | ^x.x.x      | Bandeiras dos idiomas                      |
-| `next-themes`                            | ^x.x.x      | Tema claro e escuro                        |
-| `sonner`                                 | ^x.x.x      | Notificações (toasts)                      |
-| `vaul`                                   | ^x.x.x      | Drawer / menu mobile                       |
-| `i18next` / `react-i18next`              | ^x.x.x      | Internacionalização                        |
-| `react-pdf`                              | ^x.x.x      | Visualização do currículo em PDF           |
-| `@emailjs/browser`                       | ^x.x.x      | Envio de e-mails pelo formulário           |
-| `react-google-recaptcha`                 | ^x.x.x      | Proteção anti-spam                         |
-| `react-hook-form` / `zod`                | ^x.x.x      | Formulários e validação                    |
-| `@tanstack/react-query`                  | ^x.x.x      | Gerenciamento de requisições               |
+| Pacote                      | Versão                  | Uso                                         |
+| --------------------------- | ----------------------- | ------------------------------------------- |
+| `react` / `react-dom`       | `^18.3.1`               | Biblioteca de interface                     |
+| `react-router-dom`          | `^6.30.1`               | Roteamento                                  |
+| `tailwindcss-animate`       | `^1.0.7`                | Utilitários de animação para o Tailwind     |
+| `@radix-ui/*`               | `^1.x` e `^2.x`         | Primitivos de UI acessíveis (via shadcn/ui) |
+| `framer-motion` / `motion`  | `^11.18.2` / `^12.34.0` | Animações                                   |
+| `lucide-react`              | `^0.462.0`              | Ícones                                      |
+| `flag-icons`                | `^7.5.0`                | Bandeiras dos idiomas                       |
+| `next-themes`               | `^0.3.0`                | Tema claro e escuro                         |
+| `sonner`                    | `^1.7.4`                | Notificações (toasts)                       |
+| `vaul`                      | `^0.9.9`                | Drawer / menu mobile                        |
+| `i18next` / `react-i18next` | `^25.8.7` / `^16.5.4`   | Internacionalização                         |
+| `react-pdf`                 | `^9.2.1`                | Visualização do currículo em PDF            |
+| `@emailjs/browser`          | `^4.4.1`                | Envio de e-mails pelo formulário            |
+| `react-google-recaptcha`    | `^3.1.0`                | Proteção anti-spam                          |
+| `react-hook-form` / `zod`   | `^7.71.1` / `^3.25.76`  | Formulários e validação                     |
+| `@tanstack/react-query`     | `^5.83.0`               | Gerenciamento de requisições                |
 
 ### Dependências de desenvolvimento
 
-| Pacote                                   | Versão      | Uso                                        |
-| ---------------------------------------- | ----------- | ------------------------------------------ |
-| `vite`                                   | ^5.x        | Bundler e servidor de desenvolvimento      |
-| `@vitejs/plugin-react-swc`               | ^x.x.x      | Compilação React com SWC                   |
-| `typescript`                             | ^x.x.x      | Tipagem estática                           |
-| `tailwindcss` / `postcss` / `autoprefixer` | ^3.x      | Estilização                                |
-| `@tailwindcss/typography`                | ^x.x.x      | Estilos de texto                           |
-| `eslint` / `typescript-eslint`           | ^x.x.x      | Análise estática                           |
-| `vitest`                                 | ^x.x.x      | Testes                                     |
-| `@testing-library/react`                 | ^x.x.x      | Testes de componentes                      |
-
-> 📌 Substitua os `x.x.x` pelas versões que aparecem no seu `package.json`.
+| Pacote                                     | Versão                            | Uso                                   |
+| ------------------------------------------ | --------------------------------- | ------------------------------------- |
+| `vite`                                     | `^5.4.19`                         | Bundler e servidor de desenvolvimento |
+| `@vitejs/plugin-react-swc`                 | `^3.11.0`                         | Compilação React com SWC              |
+| `typescript`                               | `^5.8.3`                          | Tipagem estática                      |
+| `tailwindcss` / `postcss` / `autoprefixer` | `^3.4.17` / `^8.5.6` / `^10.4.21` | Estilização                           |
+| `@tailwindcss/typography`                  | `^0.5.16`                         | Estilos de texto                      |
+| `eslint` / `typescript-eslint`             | `^9.32.0` / `^8.38.0`             | Análise estática                      |
+| `vitest`                                   | `^3.2.4`                          | Testes                                |
+| `@testing-library/react`                   | `^16.0.0`                         | Testes de componentes                 |
 
 ---
 
 ## Projetos em destaque
 
-Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts`:
+Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts` (imagens em `public/projects/`):
 
 | Projeto           | Descrição                                                                             | Tecnologias                                                    |
 | ----------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -196,6 +194,8 @@ Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts`:
 | **Elitphoto**     | Template de site para fotógrafo, com layout minimalista                               | HTML, CSS                                                      |
 | **CineMust**      | Site de busca com 20 filmes imperdíveis                                               | HTML, CSS, JavaScript, JSON                                    |
 | **Eiffel Lens**   | API que usa IA (Gemini) para explorar imagens surreais da Torre Eiffel                | Node.js, MongoDB, Gemini API                                   |
+
+> Os projetos **Barzêro** e **Eiffel Lens** ainda não têm imagem de capa na pasta `public/projects/`.
 
 ---
 
@@ -225,7 +225,6 @@ Os projetos exibidos no portfólio estão cadastrados em `src/lib/itens.ts`:
 │   ├── pages/               # Index e NotFound
 │   ├── App.tsx
 │   └── main.tsx
-├── CNAME                    # Domínio personalizado (l4r1ss4cr4v0.dev)
 ├── package.json             # Dependências e scripts
 ├── tailwind.config.ts
 ├── vite.config.ts
@@ -310,7 +309,7 @@ Para alterar textos, edite o JSON do idioma correspondente. Dados que não depen
 
 🌐 **Acesse o site publicado:** [https://l4r1ss4cr4v0.dev](https://l4r1ss4cr4v0.dev)
 
-O projeto é publicado na [Vercel](https://vercel.com/) a partir do repositório no GitHub, com o domínio personalizado **l4r1ss4cr4v0.dev** (definido no arquivo `CNAME`).
+O projeto é publicado na [Vercel](https://vercel.com/) a partir do repositório no GitHub, com o domínio personalizado **l4r1ss4cr4v0.dev**, configurado no painel da hospedagem.
 
 - **Comando de build:** `npm run build`
 - **Diretório de saída:** `dist`
@@ -322,6 +321,6 @@ O projeto é publicado na [Vercel](https://vercel.com/) a partir do repositório
 
 **Larissa Cravo Carvalho Câmara Santos** — Belo Horizonte, MG, Brasil
 
-- 📧 [l4r1ss4cr4v0ccamara@gmail.com](mailto:l4r1ss4cr4v0ccamara@gmail.com)
+- 📧 [larissacravoccamara@gmail.com](mailto:larissacravoccamara@gmail.com)
 - 💼 [LinkedIn](https://www.linkedin.com/in/larissa-cravo-carvalho-camara-santos-154b66306/)
 - 🐙 [GitHub](https://github.com/L4r1ss4Cr4v0)
